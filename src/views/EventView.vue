@@ -18,13 +18,7 @@
 </template>
 
 <script>
-import { displayImage } from "@/firebase.js";
-export default {
-  setup() {
-    const showImage = displayImage();
-    return { showImage };
-  },
-};
+export default {};
 </script>
 
 
