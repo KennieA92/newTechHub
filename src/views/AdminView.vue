@@ -1,11 +1,16 @@
 <template>
-  <div class="about"> 
+  <div class="about">
     <h1>This is an admin page</h1>
     <h1>Welcome {{ name }}</h1>
-    <button  @click="logout">  <!-- v-if="user"  -->
+    <button @click="logout">
+      <!-- v-if="user"  -->
       Logout
     </button>
 
+    <label class="form-label" for="customFile"
+      >Default file input example</label
+    >
+    <input @change="upload" type="file" class="form-control" id="customFile" />
     <TechEventCreate />
     <TechEventList />
   </div>
@@ -14,46 +19,49 @@
 
 <script>
 // Stuff for Login (Auth)
-import firebase from 'firebase/compat/app';
-import { ref, onBeforeMount } from 'vue'
-import { /*useRoute,*/ useRouter } from 'vue-router'
+import firebase from "firebase/compat/app";
+import { ref, onBeforeMount } from "vue";
+import { /*useRoute,*/ useRouter } from "vue-router";
 
-import TechEventCreate from '@/components/Admin/TechEventCreateComponent.vue'
-import TechEventList from '@/components/Admin/TechEventListComponent.vue'
+import TechEventCreate from "@/components/Admin/TechEventCreateComponent.vue";
+import TechEventList from "@/components/Admin/TechEventListComponent.vue";
+import { uploadImage } from "@/firebase.js";
 export default {
-  name: 'HomeView',
+  name: "HomeView",
   components: {
-    TechEventCreate, 
-    TechEventList
+    TechEventCreate,
+    TechEventList,
   },
   setup() {
-    const router = useRouter()
+    const router = useRouter();
     //const route = useRoute()
-    const name = ref("")
-    
+    const name = ref("");
+    const upload = async (img) => {
+      await uploadImage(img);
+    };
     onBeforeMount(() => {
-      const user = firebase.auth().currentUser // checking for the user info and store it in 'user'
+      const user = firebase.auth().currentUser; // checking for the user info and store it in 'user'
       //console.log("testUser: ", user.email)
       if (user) {
-        name.value = user.email.split('@')[0] // check for @ and split it there. so stuff before the @ sign.
-      }
-      else {
-        router.push('/login') 
+        name.value = user.email.split("@")[0]; // check for @ and split it there. so stuff before the @ sign.
+      } else {
+        router.push("/login");
       }
     });
-    
+
     const logout = () => {
       firebase
-      .auth()
-      .signOut()
-      .then(() => {
-      // Sign-out successful.
-      }).catch((error) => {
-        console.log("err", error.message)
-      // An error happened.
-      });
-    }
-    return { name, logout }  
-  }
-}
+        .auth()
+        .signOut()
+        .then(() => {
+          // Sign-out successful.
+        })
+        .catch((error) => {
+          console.log("err", error.message);
+          // An error happened.
+        });
+    };
+    return { name, logout, upload };
+  },
+};
 </script>
