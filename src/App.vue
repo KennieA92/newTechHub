@@ -1,38 +1,41 @@
 <template>
-<NavigationComponent />
+  <NavigationComponent />
   <div id="nav">
     <router-link to="/">Home</router-link> |
-    <router-link to="/admin">Admin</router-link>
+    <router-link to="/admin">Admin</router-link> |
+    <router-link to="/events">Events</router-link>
   </div>
-  <router-view/>
+  <router-view />
 </template>
 
 <script>
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/auth';
-import {} from '@/firebase.js' // all from firebase.js file
-import { onBeforeMount} from 'vue' // lifecycle hook
-import { useRouter, useRoute } from 'vue-router' // able to use methods from vue-router (replace etc)
-import NavigationComponent from '@/components/NavigationComponent.vue'
+import firebase from "firebase/compat/app";
+import "firebase/compat/auth";
+import {} from "@/firebase.js"; // all from firebase.js file
+import { onBeforeMount } from "vue"; // lifecycle hook
+import { useRouter, useRoute } from "vue-router"; // able to use methods from vue-router (replace etc)
+import NavigationComponent from "@/components/NavigationComponent.vue";
 export default {
   components: {
-    NavigationComponent
+    NavigationComponent,
   },
   setup() {
     const router = useRouter(); // just declaring them
     const route = useRoute();
-    onBeforeMount(() => { // 
+    onBeforeMount(() => {
+      //
       firebase.auth().onAuthStateChanged((user) => {
-        if (!user) { // dont have a user - not logged in)
-          router.replace('/login') // send them to this place
+        if (!user) {
+          // dont have a user - not logged in)
+          router.replace("/login"); // send them to this place
+        } else if (route.path == "/login" || route.path == "/register") {
+          // if logged in on this page, send us to home
+          router.replace("/"); // test: go to frontpage, should redirect
         }
-        else if (route.path == '/login' || route.path == '/register') { // if logged in on this page, send us to home
-          router.replace('/'); // test: go to frontpage, should redirect
-        }
-      })
-    })
-  }
-}
+      });
+    });
+  },
+};
 </script>
 
 <style lang="scss">

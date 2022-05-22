@@ -43,6 +43,7 @@ export default {
     const router = useRouter();
     //const route = useRoute()
     const name = ref("");
+
     const upload = async (img) => {
       await uploadImage(img);
     };

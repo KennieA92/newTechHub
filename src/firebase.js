@@ -26,10 +26,10 @@ const techEventCollection = db.collection('techEvents'); // grab the collection 
 // Add a event to the event collection
 
 // Image
+const storage = getStorage();
 
 export const uploadImage = async (e) => {
   // Get a reference to the storage service, which is used to create references in your storage bucket
-  const storage = getStorage();
 
   // Create a storage reference from our storage service
   const storageRef = firebaseRef(storage, 'images');
@@ -40,8 +40,8 @@ export const uploadImage = async (e) => {
   const fileRef = storageUpload.child('images/' + file.name);
   const task = fileRef.put(file);
 
-  setDoc(doc(db, 'images', file.name), {
-    path: 'images/' + file.name,
+  setDoc(doc(db, 'techEvents', 'NsjCtU4WP3zy3vOyOwxf'), {
+    img: file.name,
   });
   task.on(
     'state_changed',
@@ -56,6 +56,7 @@ export const uploadImage = async (e) => {
     },
     () => {
       console.log('amazing');
+      console.log(file);
       /* complete */
     }
   );
