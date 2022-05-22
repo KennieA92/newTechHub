@@ -34,10 +34,12 @@ export const uploadImage = async (e) => {
   // Create a storage reference from our storage service
   const storageRef = firebaseRef(storage, 'images');
   console.log(storageRef);
-  const file = e.target.files[0];
+
+  const file = e.dataTransfer.files[0];
   const storageUpload = firebase.storage().ref();
   const fileRef = storageUpload.child('images/' + file.name);
   const task = fileRef.put(file);
+
   setDoc(doc(db, 'images', file.name), {
     path: 'images/' + file.name,
   });

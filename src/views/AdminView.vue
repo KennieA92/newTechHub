@@ -6,11 +6,18 @@
       <!-- v-if="user"  -->
       Logout
     </button>
-
-    <label class="form-label" for="customFile"
-      >Default file input example</label
-    >
-    <input @change="upload" type="file" class="form-control" id="customFile" />
+    <div @dragover.prevent @drop.prevent>
+      <label class="form-label" for="customFile"
+        >Default file input example</label
+      >
+      <input
+        @change="upload"
+        type="file"
+        class="form-control"
+        id="customFile"
+      />
+      <div class="box" @drop="upload"></div>
+    </div>
     <TechEventCreate />
     <TechEventList />
   </div>
@@ -65,3 +72,11 @@ export default {
   },
 };
 </script>
+
+<style lang='scss'>
+.box {
+  height: 500px;
+  width: 500px;
+  background: pink;
+}
+</style>
