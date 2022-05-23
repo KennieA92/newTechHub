@@ -69,11 +69,11 @@ nav {
   border-bottom: 2px solid darken($primary-color, 10%);
   .navbar-toggler {
     border-radius: 0px;
-    border: 2px solid $text-color;
+    border: 2px solid $quaternary-color;
     .navbar-toggler-icon {
       text-align: center;
       i {
-        color: $text-color;
+        color: $quaternary-color;
         font-size: 28px;
       }
     }
