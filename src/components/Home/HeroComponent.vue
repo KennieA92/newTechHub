@@ -39,14 +39,13 @@ export default {
       top: 0;
       height: 100vh;
       width: 100%;
-      z-index: -5542542;
       object-fit: cover;
       filter: brightness(50%);
     }
 
     .hero-info-panel {
       display: flex;
-      // z-index: -5;
+      z-index: 2;
       flex-direction: column;
 
       .btn-ticket {

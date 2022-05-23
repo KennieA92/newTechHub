@@ -46,5 +46,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: $quaternary-color;
+  background: $quaternary-color;
 }
 </style>

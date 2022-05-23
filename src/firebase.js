@@ -19,7 +19,7 @@ const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 const techEventCollection = db.collection('techEvents'); // grab the collection from firestore
 
-// const testimonialCollection = db.collection('testimonials')
+const testimonialCollection = db.collection('testimonials')
 // const galleryImageCollection = db.collection('galleryImages')
 
 // create an event by using the add prototype from firebase
@@ -106,34 +106,34 @@ export const useLoadTechEvents = () => {
 };
 
 // /* Testimonial Crud */
-// export const createTestimonial = testimonial => {
-//     return testimonialCollection.add(testimonial)
-// }
+export const createTestimonial = testimonial => {
+  return testimonialCollection.add(testimonial)
+}
 
-// export const getTestimonial = async id => {
-//     const testimonial = await testimonialCollection.doc(id).get()
-//     return testimonial.exists ? testimonial.data() : null
-// }
+export const getTestimonial = async id => {
+  const testimonial = await testimonialCollection.doc(id).get()
+  return testimonial.exists ? testimonial.data() : null
+}
 
-// export const updateTestimonial = (id, testimonial) => {
-//     return testimonialCollection.doc(id).update(testimonial)
-// }
+export const updateTestimonial = (id, testimonial) => {
+  return testimonialCollection.doc(id).update(testimonial)
+}
 
-// export const deleteTestimonial = id => {
-//     return testimonialCollection.doc(id).delete()
-// }
+export const deleteTestimonial = id => {
+  return testimonialCollection.doc(id).delete()
+}
 
-// export const useLoadTestimonial = () => {
-//     const testimonials = ref([])
-//     const close = testimonialCollection.onSnapshot(snapshot => {
-//         testimonials.value = snapshot.docs.map(doc => ({
-//             id: doc.id,
-//             ...doc.data()
-//         }))
-//     })
-//     onUnmounted(close)
-//     return testimonials
-// }
+export const useLoadTestimonial = () => {
+  const testimonials = ref([])
+  const close = testimonialCollection.onSnapshot(snapshot => {
+    testimonials.value = snapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }))
+  })
+  onUnmounted(close)
+  return testimonials
+}
 
 // /* Gallery Images Crud */
 // export const createGalleryImage = galleryImage => {
