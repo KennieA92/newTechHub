@@ -1,8 +1,8 @@
 <template>
-  <div class="col-12 d-flex justify-content-center" v-if="showNavbar">
-    <nav class="navbar navbar-expand-lg sticky col-12 col-sm-12 col-md-11">
-      <div class="d-flex container-fluid">
-        <a class="navbar-brand" href="#"
+  <div class="col-12 d-flex justify-content-center">
+    <nav class="navbar navbar-expand-lg col-12 col-sm-12 col-md-12">
+      <div class="d-flex container-fluid justify-content-md-between">
+        <a class="navbar-brand" href="/"
           ><img src="../assets/logo.svg" alt="logo"
         /></a>
         <button
@@ -19,19 +19,29 @@
           </span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end"
+          class="collapse navbar-collapse col-md-10 justify-content-around"
           id="navbarTogglerDemo02"
         >
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
               <router-link class="nav-link" to="/">Home</router-link>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="#mission-section">Our Mission</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#project-section">Projects</a>
+              <a class="nav-link" href="#whatwedo-section">About us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#about-section">About</a>
+              <a class="nav-link" href="#ourpartners-section">Our Partners</a>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/admin">Admin</router-link>
+            </li> 
+            <li class="nav-item">
+              <router-link class="nav-link" to="/events">Events</router-link>
+            </li> 
+
           </ul>
         </div>
       </div>
@@ -64,7 +74,11 @@ export default {
 
 <style lang="scss" scoped>
 nav {
-  min-height: 10vh;
+  background: $primary-color;
+  position:sticky;  
+    top: 0;
+    z-index: 5;
+  max-height: 10vh;
   padding: 10px;
   border-bottom: 2px solid darken($primary-color, 10%);
   .navbar-toggler {
@@ -72,6 +86,7 @@ nav {
     border: 2px solid $quaternary-color;
     .navbar-toggler-icon {
       text-align: center;
+      color: $quaternary-color;
       i {
         color: $quaternary-color;
         font-size: 28px;
@@ -86,7 +101,7 @@ nav {
   }
   .navbar-brand {
     img {
-      height: 8vh;
+      height: 6vh;
     }
   }
   a {
@@ -95,11 +110,6 @@ nav {
     &:hover {
       color: $tertiary-color;
     }
-  }
-  &.sticky {
-    background-color: $primary-color;
-    top: 0;
-    z-index: 5;
   }
 }
 .fade-enter-active {
