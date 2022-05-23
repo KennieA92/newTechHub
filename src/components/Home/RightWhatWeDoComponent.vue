@@ -4,7 +4,7 @@
             <img class="col-12 col-sm-2 col-md-2" :src="resolve_img_url(imgUrl)" alt="">
             <div class=" text-container d-flex flex-column align-items-center justify-content-start col-6">
                 <h2 class="col-12">{{ titleText }}</h2>
-                <p class="col-12 col-sm-9">
+                <p class="col-12 col-sm-10 my-0">
                     {{ contentText }}
                 </p>
             </div>
@@ -37,7 +37,7 @@ export default {
     border-top-left-radius: 200px;
     border-bottom-left-radius: 200px;
     margin: 2vh 0;
-    min-height: 20vh;
+    min-height: 25vh;
 
 
     .text-container {
@@ -47,7 +47,7 @@ export default {
     }
 
     img {
-        height: 18vh;
+        height: 22vh;
     }
 
     @media only screen and (max-width: 600px) {

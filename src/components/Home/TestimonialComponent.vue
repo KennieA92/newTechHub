@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container d-flex col-8 col-sm-6 col-md-6 col-lg-4 px-4 flex-column justify-content-center">
+    <div class="main-container d-flex col-10 col-sm-6 col-md-6 col-lg-4 px-4 flex-column justify-content-center">
         <div class="quote-container d-flex justify-content-between">
             <i class="fa fa-quote-left col-1" aria-hidden="true"></i>
             <i class="fa fa-quote-right col-1" aria-hidden="true"></i>
