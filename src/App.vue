@@ -6,7 +6,7 @@
 <script>
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import {} from "@/firebase.js"; // all from firebase.js file
+import { } from "@/firebase.js"; // all from firebase.js file
 import { onBeforeMount } from "vue"; // lifecycle hook
 import { useRouter, useRoute } from "vue-router"; // able to use methods from vue-router (replace etc)
 import NavigationComponent from "@/components/NavigationComponent.vue";
@@ -34,6 +34,12 @@ export default {
 </script>
 
 <style lang="scss">
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -41,8 +47,4 @@ export default {
   text-align: center;
   color: $quaternary-color;
 }
-router-view{
-margin-top: 8vh;
-}
-
 </style>
