@@ -39,7 +39,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: &quaternary-color;
+  color: $quaternary-color;
 }
 router-view{
 margin-top: 8vh;
