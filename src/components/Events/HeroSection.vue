@@ -35,8 +35,8 @@ export default {};
   #hero-info {
     text-align: left;
   }
-  #big-c {
-    background-color: black;
-  }
+  //   #big-c {
+  //     background-color: black;
+  //   }
 }
 </style>

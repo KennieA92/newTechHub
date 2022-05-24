@@ -19,17 +19,8 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
 import EventModalWindow from "./EventModalWindow.vue";
 export default {
-  setup() {
-    let showModal = ref(false);
-    let toggleModal = () => {
-      showModal.value = !showModal.value;
-    };
-
-    return { toggleModal, showModal };
-  },
   components: { EventModalWindow },
 };
 </script>
