@@ -12,7 +12,7 @@
             </p>
           </div>
           <div id="hero-img" class="col d-flex justify-content-end">
-            <img src="../../assets/circles.svg" width="600px" alt="" />
+            <img src="../../assets/b-img.svg" width="600px" alt="" />
           </div>
         </div>
       </div>
@@ -35,7 +35,8 @@ export default {};
   #hero-info {
     text-align: left;
   }
-  #hero-img {
+  #big-c {
+    background-color: black;
   }
 }
 </style>
