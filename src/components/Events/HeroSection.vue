@@ -2,14 +2,17 @@
   <div>
     <section id="hero-section" class="d-flex min-vh-100 col-md-12">
       <div class="container d-flex align-items-center">
-        <div class="row-2">
-          <div id="hero-info" class="col-5 text-left">
+        <div class="row align-items-center">
+          <div id="hero-info" class="col-4">
             <h1 class="text-left">Hello World</h1>
             <p class="text-left">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea nulla
               doloribus sequi nisi iusto laudantium numquam omnis perspiciatis
               dolor eos?
             </p>
+          </div>
+          <div id="hero-img" class="col d-flex justify-content-end">
+            <img src="../../assets/circles.svg" width="600px" alt="" />
           </div>
         </div>
       </div>
@@ -31,6 +34,8 @@ export default {};
 
   #hero-info {
     text-align: left;
+  }
+  #hero-img {
   }
 }
 </style>
