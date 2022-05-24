@@ -6,7 +6,7 @@
 <script>
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
-import { } from "@/firebase.js"; // all from firebase.js file
+import {} from "@/firebase.js"; // all from firebase.js file
 import { onBeforeMount } from "vue"; // lifecycle hook
 import { useRouter, useRoute } from "vue-router"; // able to use methods from vue-router (replace etc)
 import NavigationComponent from "@/components/NavigationComponent.vue";
@@ -38,7 +38,15 @@ export default {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
 
+h1 {
+  font-family: "Aqua Grotesque";
+}
+
+@font-face {
+  font-family: "Aqua Grotesque";
+  src: url("./assets/fonts/aqua.ttf");
 }
 
 #app {
