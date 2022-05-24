@@ -1,8 +1,8 @@
 <template>
   <div class="col-12 d-flex justify-content-center" v-if="showNavbar">
     <nav class="navbar navbar-expand-lg col-12 col-sm-12 col-md-12">
-      <div class="d-flex container-fluid justify-content-md-between">
-        <a class="navbar-brand" href="/"><img src="../assets/logo.svg" alt="logo" /></a>
+      <div class="d-flex container-fluid justify-content-md-between col-10 px-0">
+        <a class="navbar-brand col-2" href="/"><img src="../assets/logo.svg" alt="logo" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
@@ -71,8 +71,44 @@ nav {
   top: 0;
   z-index: 5;
   max-height: 10vh;
-  padding: 10px;
   overflow-x: visible;
+
+  .navbar-collapse {
+
+
+    @media only screen and (max-width: 600px) {
+      margin-top: 1.6vh;
+      background: rgba(darken($primary-color, 25), 0.85);
+      backdrop-filter: blur(10px);
+
+      .nav-item {
+        a {
+          font-size: 1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 1.05rem;
+
+          &:hover {
+            color: $tertiary-color;
+            text-decoration: none;
+          }
+        }
+      }
+
+    }
+  }
+
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        padding-left: 2rem;
+        padding-right: 0.5rem;
+
+      }
+
+
+    }
+  }
 
   .navbar-toggler {
     border-radius: 0px;
@@ -89,14 +125,11 @@ nav {
         font-size: 28px;
       }
     }
+
+
   }
 
-  .navbar-nav {
-    .nav-link {
-      padding-left: 2rem;
-      padding-right: 0.5rem;
-    }
-  }
+
 
   .navbar-brand {
     img {
