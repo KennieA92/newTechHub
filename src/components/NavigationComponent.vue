@@ -27,6 +27,9 @@
               <router-link class="nav-link" to="/admin">Admin</router-link>
             </li>
             <li class="nav-item">
+              <router-link class="nav-link" to="/techStartUp">Start Ups</router-link>
+            </li>
+            <li class="nav-item">
               <router-link class="nav-link" to="/events">Events</router-link>
             </li>
 
@@ -70,7 +73,7 @@ nav {
   position: fixed;
   top: 0;
   z-index: 5;
-  max-height: 10vh;
+  height: 10vh;
   overflow-x: visible;
 
   .navbar-collapse {

@@ -33,6 +33,7 @@ export default {
 <style lang="scss" scoped>
 #mission-section {
     margin-top: 5vh;
+    overflow-x: hidden;
 }
 
 h1 {
