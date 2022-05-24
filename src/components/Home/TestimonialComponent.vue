@@ -1,5 +1,5 @@
 <template>
-    <div class="main-container d-flex col-10 col-sm-6 col-md-6 col-lg-4 px-4 flex-column justify-content-center">
+    <div class="main-container d-flex col-11 col-sm-12 col-md-6 col-lg-5 px-4 flex-column justify-content-center">
         <div class="quote-container d-flex justify-content-between">
             <i class="fa fa-quote-left col-1" aria-hidden="true"></i>
             <i class="fa fa-quote-right col-1" aria-hidden="true"></i>
@@ -30,10 +30,10 @@ export default {
 
 <style lang="scss" scoped>
 .main-container {
-    height: 40vh;
-    clip-path: polygon(5% 0, 100% 0%, 95% 100%, 0% 100%);
-
-    background: $primary-color;
+    min-height: 40vh;
+    color: black;
+    border: 1px solid $primary-color;
+    background: rgba($primary-color, 0.01);
     margin: 1vw;
 
     span {
@@ -42,6 +42,7 @@ export default {
         display: flex;
         align-self: flex-start;
     }
+
 
     .testimonial-text {
         padding: 0 1vw;

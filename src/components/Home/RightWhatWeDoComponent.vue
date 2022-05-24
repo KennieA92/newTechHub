@@ -51,7 +51,7 @@ export default {
     }
 
     @media only screen and (max-width: 600px) {
-        height: 80vh;
+        height: 90vh;
         border-radius: 0;
         display: flex !important;
         flex-wrap: wrap;

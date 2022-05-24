@@ -72,14 +72,17 @@ nav {
   z-index: 5;
   max-height: 10vh;
   padding: 10px;
+  overflow-x: visible;
 
   .navbar-toggler {
     border-radius: 0px;
     border: 2px solid $quaternary-color;
+    overflow-x: visible;
 
     .navbar-toggler-icon {
       text-align: center;
       color: $quaternary-color;
+      overflow-x: visible;
 
       i {
         color: $quaternary-color;

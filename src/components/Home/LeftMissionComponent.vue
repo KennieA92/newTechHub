@@ -44,5 +44,9 @@ export default {
     img {
         height: 10vh;
     }
+
+    @media only screen and (max-width: 600px) {
+        height: 20vh;
+    }
 }
 </style>
