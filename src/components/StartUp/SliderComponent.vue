@@ -11,15 +11,23 @@
                 <div class="carousel-item active" data-bs-interval="10000">
                     <img :src="require('@/assets/StartUp/Image1.png')" class="d-block w-100" alt="...">
                     <div class="carousel-caption d-block">
-                        <h5>Founders of Techhub</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
+                        <h5>TechHub Reboot Event</h5>
+                        <p>Tech&Tequila Event hosted at Esbjerg Streetfood by Kasper, Ronni & Trine. </p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
                     <img :src="require('@/assets/StartUp/Image2.png')" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block">
+                        <h5>Networking Event</h5>
+                        <p>People networking at Esbjerg Streetfood, during the Tech & Tequila event. </p>
+                    </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
                     <img :src="require('@/assets/StartUp/Image3.png')" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-block">
+                        <h5>Engaging presentation</h5>
+                        <p>People listening intently to the presentation done by Ronni. </p>
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#hero-slider" data-bs-slide="prev">
