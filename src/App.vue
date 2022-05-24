@@ -40,8 +40,13 @@ export default {
   box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Aqua Grotesque";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Aqua Grotesque", sans-serif;
 }
 
 @font-face {

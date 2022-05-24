@@ -2,7 +2,7 @@
   <div>
     <section id="hero-section" class="d-flex min-vh-100 col-md-12">
       <div class="container d-flex align-items-center">
-        <div class="row-5">
+        <div class="row-2">
           <div id="hero-info" class="col-5 text-left">
             <h1 class="text-left">Hello World</h1>
             <p class="text-left">
