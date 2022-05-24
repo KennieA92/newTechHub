@@ -2,26 +2,17 @@
   <div class="col-12 d-flex justify-content-center" v-if="showNavbar">
     <nav class="navbar navbar-expand-lg col-12 col-sm-12 col-md-12">
       <div class="d-flex container-fluid justify-content-md-between col-10 px-0">
-        <a class="navbar-brand col-2" href="/"><img src="../assets/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand col-1" href="/"><img src="../assets/logo.svg" alt="logo" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
             <i class="fas fa-bars"></i>
           </span>
         </button>
-        <div class="collapse navbar-collapse col-md-10 justify-content-around" id="navbarTogglerDemo02">
+        <div class="collapse navbar-collapse col-md-10 justify-content-end" id="navbarTogglerDemo02">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
               <router-link class="nav-link" to="/">Home</router-link>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#mission-section">Our Mission</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#whatwedo-section">About us</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#ourpartners-section">Our Partners</a>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/admin">Admin</router-link>

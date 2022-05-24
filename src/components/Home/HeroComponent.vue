@@ -31,6 +31,8 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 
+
+
   .hero-info {
     text-align: start;
 

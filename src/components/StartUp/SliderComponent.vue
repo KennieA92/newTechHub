@@ -59,19 +59,21 @@ export default {
             height: 100%;
             object-fit: cover;
             object-position: top center;
-            filter: brightness(0.4);
+            filter: brightness(0.30);
 
         }
     }
 }
 
-@media only screen and (max-width: 600px) {
+
+@media only screen and (max-width: 550px) {
     .carousel-inner {
-        height: 90vh;
+        margin-top: 8vh;
+        height: 30vh;
 
         .carousel-item {
             img {
-                object-fit: cover;
+                object-fit: scale-down;
                 object-position: unset;
 
             }
