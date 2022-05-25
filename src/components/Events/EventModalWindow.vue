@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="block container">
+    <div class="block container" @click="$emit('close')">
       <div class="card mb-3">
         <h3 class="m-4">Event Heading</h3>
-        <button type="button" class="close" @click="$emit('close')">X</button>
+        <!-- <button type="button" class="close">X</button> -->
         <img
           class="card-img-top"
           :src="require('@/assets/StartUp/Image3.png')"

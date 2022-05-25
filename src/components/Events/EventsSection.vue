@@ -2,9 +2,11 @@
   <div>
     <section id="hero-section" class="min-vh-100 col-md-12">
       <div class="container">
-        <div class="row-2">
+        <div class="row">
           <div class="col-5 text-left" id="hero-info">
             <h1 class="text-left my-5">| Our Events:</h1>
+          </div>
+          <div class="row">
             <SingleEventCard @click="toggleModal" />
           </div>
         </div>

@@ -1,14 +1,48 @@
 <template>
   <Transition name="changebackground">
-    <section id="hero-section" class="hero-section justify-content-center align-items-end d-flex min-vh-100 col-md-12">
-      <div class="hero-info col-sm-8 col-md-10 d-flex justify-content-sm-center flex-md-column">
-        <video src="@/assets/hero_video.mp4" autoplay loop muted playsinline></video>
+    <section
+      id="hero-section"
+      class="
+        hero-section
+        justify-content-center
+        align-items-end
+        d-flex
+        min-vh-100
+        col-md-12
+      "
+    >
+      <div
+        class="
+          hero-info
+          col-sm-8 col-md-10
+          d-flex
+          justify-content-sm-center
+          flex-md-column
+        "
+      >
+        <video
+          src="@/assets/hero_video.mp4"
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
         <div
-          class="hero-info-panel col-sm-8 col-md-5 col-lg-4 justify-content-end my-5 my-md-0 justify-content-md-center align-items-center">
+          class="
+            hero-info-panel
+            col-sm-8 col-md-5 col-lg-4
+            justify-content-end
+            my-5 my-md-0
+            justify-content-md-center
+            align-items-center
+          "
+        >
           <h1 class="col-sm-12 col-md-12">Techhub</h1>
-          <p class="col-sm-12 col-md-12">We support tech startups, students and investors to grow the tech eco-system in
-            southern Denmark</p>
-          <a href="/tickets.html" class="btn-ticket "> BUY TICKET </a>
+          <p class="col-sm-12 col-md-12">
+            We support tech startups, students and investors to grow the tech
+            eco-system in southern Denmark
+          </p>
+          <a href="/tickets.html" class="btn-ticket"> BUY TICKET </a>
         </div>
       </div>
     </section>
@@ -17,9 +51,8 @@
 
 <script>
 export default {
-  setup() {
-  }
-}
+  setup() {},
+};
 </script>
 
 <style lang="scss" scoped>
@@ -28,12 +61,9 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
 
-
-
   .hero-info {
     text-align: center;
     margin-bottom: 10vh;
-
 
     video {
       position: absolute;
@@ -67,6 +97,7 @@ export default {
         justify-content: center;
         align-items: center;
         margin-top: 20px;
+        text-decoration: none;
       }
     }
   }
