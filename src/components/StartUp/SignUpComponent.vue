@@ -1,5 +1,5 @@
 <template>
-    <section id="startup-signup-section ">
+    <section id="startup-signup-section">
         <div class="main-container d-flex flex-wrap col-12 justify-content-center">
             <h1 class="col-12 py-3">Contact Us</h1>
 

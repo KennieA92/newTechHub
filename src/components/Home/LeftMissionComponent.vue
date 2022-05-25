@@ -32,7 +32,7 @@ export default {
     background: $secondary-color;
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
-    margin: 2vh 0;
+    margin: 0.5vh 0;
     height: 15vh;
 
     p {

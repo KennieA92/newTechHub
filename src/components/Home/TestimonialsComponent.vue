@@ -7,14 +7,6 @@
                     :name="testimonial.name" :title="testimonial.title" :website="testimonial.website"
                     :company="testimonial.company" :message="testimonial.message" />
             </div>
-            <!-- 
-    V-for of all our testimonials using TestimonialComponent
-        
- -->
-            <!--<div class="main-container" v-for="techEvent in techEvents" :key="techEvent.id">
-            <TestimonialComponent v-bind="techEvent" />
-        </div>
-        -->
         </div>
     </section>
 </template>
@@ -33,7 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 #testimonials-section {
-    margin-bottom: 5vh;
+    margin-top: 7.5vh;
 
     h1 {
         margin-top: 5vh;

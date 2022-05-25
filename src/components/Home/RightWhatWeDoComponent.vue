@@ -36,7 +36,7 @@ export default {
     background: $primary-color;
     border-top-left-radius: 200px;
     border-bottom-left-radius: 200px;
-    margin: 2vh 0;
+    margin: 0.5vh 0;
     min-height: 25vh;
 
 

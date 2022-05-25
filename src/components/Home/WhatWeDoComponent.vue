@@ -36,8 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#mission-section {
-    margin-top: 5vh;
+#whatwedo-section {
+    margin-top: 7.5vh;
 }
 
 h1 {
