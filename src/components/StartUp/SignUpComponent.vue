@@ -48,6 +48,7 @@ export default {
 .main-container {
     .contact-form {
         padding: 5vh 0;
+        margin-bottom: 5vh;
         background: rgba(black, 0.4);
         border-radius: 25px;
         backdrop-filter: blur(10px);
