@@ -72,21 +72,21 @@ export default {
   }
 }
 
-@media only screen and (max-width: 550px) {
-  .hero-section {
-    margin-bottom: -15vh;
-    min-height: 40vh !important;
+// @media only screen and (max-width: 550px) {
+//   .hero-section {
+//     margin-bottom: -15vh;
+//     min-height: 40vh !important;
 
-    .hero-info {
-      margin-top: 25vh;
+//     .hero-info {
+//       margin-top: 25vh;
 
-      video {
-        height: 50vh;
-        object-fit: scale-down;
-        object-position: unset;
+//       video {
+//         height: 50vh;
+//         object-fit: scale-down;
+//         object-position: unset;
 
-      }
-    }
-  }
-}
+//       }
+//     }
+//   }
+// }
 </style>
