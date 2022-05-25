@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
+  <div class="admin">
     <h1>This is an admin page</h1>
     <h1>Welcome {{ name }}</h1>
     <button @click="logout">
@@ -7,19 +7,17 @@
       Logout
     </button>
     <div @dragover.prevent @drop.prevent>
-      <label class="form-label" for="customFile"
-        >Default file input example</label
-      >
-      <input
-        @change="upload"
-        type="file"
-        class="form-control"
-        id="customFile"
-      />
+      <label class="form-label" for="customFile">Default file input example</label>
+      <input @change="upload" type="file" class="form-control" id="customFile" />
       <div class="box" @drop="upload"></div>
     </div>
     <TechEventCreate />
     <TechEventList />
+
+    <TestimonialCreateComponent />
+    <TestimonialListComponent />
+
+
   </div>
 </template>
 
@@ -33,11 +31,13 @@ import { /*useRoute,*/ useRouter } from "vue-router";
 import TechEventCreate from "@/components/Admin/TechEventCreateComponent.vue";
 import TechEventList from "@/components/Admin/TechEventListComponent.vue";
 import { uploadImage } from "@/firebase.js";
+import TestimonialCreateComponent from "@/components/Admin/TestimonialCreateComponent.vue";
 export default {
   name: "HomeView",
   components: {
     TechEventCreate,
     TechEventList,
+    TestimonialCreateComponent
   },
   setup() {
     const router = useRouter();
@@ -76,6 +76,10 @@ export default {
 
 <style lang='scss'>
 .box {
+  .admin {
+    color: black;
+  }
+
   height: 500px;
   width: 500px;
   background: pink;

@@ -4,14 +4,11 @@
             <i class="fa fa-quote-left col-1" aria-hidden="true"></i>
             <i class="fa fa-quote-right col-1" aria-hidden="true"></i>
         </div>
-        <p class="testimonial-text d-flex col-12">I owe the community a BIG thank you as the first event really
-            kick-started my
-            own
-            business with a lot of contacts and positive inspiration. Have been really busy since we met at the
-            Inspirational Talk #1 </p>
-        <h2><span> - Thomas Andersen</span></h2>
-        <p class="testimonial-title">Founder / CEO</p>
-        <p class="testimonial-title">BitMind</p>
+        <p class="testimonial-text d-flex col-12">{{ message }}</p>
+        <h2><span> - {{ name }}</span></h2>
+        <p class="testimonial-title">{{ title }}</p>
+        <p class="testimonial-title">{{ company }}</p>
+        <p class="testimonial-title" v-if="website">{{ website }}</p>
 
     </div>
 </template>
@@ -20,9 +17,12 @@
 
 export default {
     props: {
-        techEvent: {
-            type: Object
-        }
+        name: String,
+        title: String,
+        company: String,
+        website: String,
+        message: String,
+
 
     }
 }

@@ -33,11 +33,13 @@ export default {
     border-top-right-radius: 100px;
     border-bottom-right-radius: 100px;
     margin: 0.5vh 0;
-    height: 15vh;
+    height: 17vh;
 
     p {
         position: absolute;
         left: 25%;
+
+        font-size: 1.5rem;
         margin: 0;
     }
 
@@ -47,6 +49,14 @@ export default {
 
     @media only screen and (max-width: 600px) {
         height: 20vh;
+
+        p {
+            font-size: 16px;
+        }
+
+        img {
+            height: 15vh;
+        }
     }
 }
 </style>

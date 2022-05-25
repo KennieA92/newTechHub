@@ -1,5 +1,5 @@
 <template>
-    <section id="mission-section" class="d-flex min-vh-100 flex-column">
+    <section id="mission-section" class="d-flex flex-column">
         <div class="mission-title">
             <h1>
                 Our Mission
@@ -32,7 +32,7 @@ export default {
     
 <style lang="scss" scoped>
 #mission-section {
-    margin-top: 5vh;
+    margin-top: 7.5vh;
     overflow-x: hidden;
 }
 
