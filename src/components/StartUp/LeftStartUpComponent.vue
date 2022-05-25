@@ -48,10 +48,14 @@ export default {
     }
 
     @media only screen and (max-width: 600px) {
-        height: 10vh;
+        height: 20vh;
 
         p {
             font-size: 16px;
+        }
+
+        img {
+            height: 15vh;
         }
     }
 }
