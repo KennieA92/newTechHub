@@ -23,6 +23,9 @@
             <li class="nav-item">
               <router-link class="nav-link" to="/events">Events</router-link>
             </li>
+            <li class="nav-item">
+              <router-link class="nav-link" to="/contact">Contact Us</router-link>
+            </li>
 
           </ul>
         </div>

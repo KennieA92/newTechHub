@@ -18,11 +18,7 @@
           <td>
             <!-- manually type action buttons -->
             <!-- :to will redirect the user to the edit URL with the id set to the project we are iterating -->
-            <router-link :to="`/Testimonial/edit/${id}`">
-              <button class="btn btn-primary btn-sm me-2">
-                Edit
-              </button>
-            </router-link>
+
             <!-- use deleteProject and pass the id -->
             <button class="btn btn-danger btn-sm" @click="deleteTestimonial(id)">
               Delete

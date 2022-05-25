@@ -3,6 +3,7 @@ import HomeView from '../views/HomeView.vue'; // For login stuff
 import LoginView from '../views/LoginView.vue';
 import EditTechEventView from '../views/EditTechEventView.vue';
 import TechStartUpView from '../views/TechStartUpView.vue';
+import ContactUsView from '../views/ContactUsView.vue';
 
 const routes = [
   {
@@ -38,6 +39,10 @@ const routes = [
     path: '/techStartUp',
     name: 'TechStartUp',
     component: TechStartUpView,
+  }, {
+    path: '/contact',
+    name: 'contact',
+    component: ContactUsView,
   },
 ];
 
