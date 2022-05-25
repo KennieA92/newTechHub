@@ -1,16 +1,13 @@
 <template>
   <Transition name="changebackground">
-    <section id="hero-section" class="hero-section justify-content-center d-flex min-vh-100 col-md-12">
+    <section id="hero-section" class="hero-section justify-content-center align-items-end d-flex min-vh-100 col-md-12">
       <div class="hero-info col-sm-8 col-md-10 d-flex justify-content-sm-center flex-md-column">
         <video src="@/assets/hero_video.mp4" autoplay loop muted playsinline></video>
         <div
           class="hero-info-panel col-sm-8 col-md-5 col-lg-4 justify-content-end my-5 my-md-0 justify-content-md-center align-items-center">
-          <h1 class="col-sm-10 col-md-10">Heading</h1>
-          <p class="col-sm-10 col-md-10">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed mattis
-            risus.
-            Integer blandit pulvinar risus, vel tempor orci tincidunt eget. Donec sed ligula diam. Donec et volutpat
-            nunc,
-            at tincidunt risus. Nullam </p>
+          <h1 class="col-sm-12 col-md-12">Techhub</h1>
+          <p class="col-sm-12 col-md-12">We support tech startups, students and investors to grow the tech eco-system in
+            southern Denmark</p>
           <a href="/tickets.html" class="btn-ticket "> BUY TICKET </a>
         </div>
       </div>
@@ -34,7 +31,9 @@ export default {
 
 
   .hero-info {
-    text-align: start;
+    text-align: center;
+    margin-bottom: 10vh;
+
 
     video {
       position: absolute;
@@ -43,7 +42,7 @@ export default {
       height: 100vh;
       width: 100%;
       object-fit: cover;
-      filter: brightness(50%);
+      filter: brightness(75%);
     }
 
     .hero-info-panel {
@@ -51,9 +50,10 @@ export default {
       z-index: 2;
       flex-direction: column;
 
+      backdrop-filter: blur(2px);
+
       @media only screen and (max-width: 600px) {
         width: 80vw;
-        text-align: center;
       }
 
       .btn-ticket {
@@ -67,6 +67,24 @@ export default {
         justify-content: center;
         align-items: center;
         margin-top: 20px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .hero-section {
+    margin-bottom: -15vh;
+    min-height: 40vh !important;
+
+    .hero-info {
+      margin-top: 25vh;
+
+      video {
+        height: 50vh;
+        object-fit: scale-down;
+        object-position: unset;
+
       }
     }
   }
