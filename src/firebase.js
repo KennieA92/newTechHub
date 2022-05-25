@@ -123,7 +123,7 @@ export const deleteTestimonial = id => {
   return testimonialCollection.doc(id).delete()
 }
 
-export const useLoadTestimonial = () => {
+export const useLoadTestimonials = () => {
   const testimonials = ref([])
   const close = testimonialCollection.onSnapshot(snapshot => {
     testimonials.value = snapshot.docs.map(doc => ({
