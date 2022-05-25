@@ -12,7 +12,7 @@
             </p>
           </div>
           <div id="hero-img" class="col d-flex justify-content-end">
-            <img src="../../assets/b-img.svg" width="600px" alt="" />
+            <img src="../../assets/bubbles.png" width="700px" alt="" />
           </div>
         </div>
       </div>
