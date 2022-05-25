@@ -1,21 +1,31 @@
 <template>
     <div class="start-ups">
         <SliderComponent />
+        <StartUpInfoComponent />
+        <StartUpSectionComponent />
+        <SignUpComponent />
+
     </div>
 </template>
 
 <script>
 import SliderComponent from '@/components/StartUp/SliderComponent.vue'
+import StartUpSectionComponent from '@/components/StartUp/StartUpSectionComponent.vue'
+import StartUpInfoComponent from '../components/StartUp/StartUpInfoComponent.vue'
+import SignUpComponent from '../components/StartUp/SignUpComponent.vue'
 export default {
     components: {
-        SliderComponent
+        SliderComponent,
+        StartUpSectionComponent,
+        StartUpInfoComponent,
+        SignUpComponent
     }
 }
 </script>
 
 <style lang="scss" scoped>
 .start-ups {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(to bottom,
             $primary-color,
             40%,
