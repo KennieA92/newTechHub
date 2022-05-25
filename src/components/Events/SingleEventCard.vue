@@ -19,9 +19,20 @@
 </template>
 
 <script>
+import { ref } from "@vue/reactivity";
 import EventModalWindow from "./EventModalWindow.vue";
 export default {
   components: { EventModalWindow },
+  setup() {
+    const showModal = ref(false);
+    const toggleModal = () => {
+      showModal.value = !showModal.value;
+    };
+    return {
+      showModal,
+      toggleModal,
+    };
+  },
 };
 </script>
 <style lang="scss" scoped>

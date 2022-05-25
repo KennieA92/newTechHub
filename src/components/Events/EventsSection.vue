@@ -14,22 +14,10 @@
 </template>
 
 <script>
-import { ref } from "@vue/reactivity";
-
 import SingleEventCard from "./SingleEventCard.vue";
 export default {
   components: {
     SingleEventCard,
-  },
-  setup() {
-    const showModal = ref(false);
-    const toggleModal = () => {
-      showModal.value = !showModal.value;
-    };
-    return {
-      showModal,
-      toggleModal,
-    };
   },
 };
 </script>
