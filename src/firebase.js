@@ -25,8 +25,7 @@ const testimonialCollection = db.collection('testimonials');
 
 const storageRef = getStorage(storage);
 console.log(storageRef);
-
-const galleryImageCollection = db.collection('galleryImages');
+// const galleryImageCollection = db.collection('galleryImages');
 
 // create an event by using the add prototype from firebase
 // Add a event to the event collection
@@ -48,15 +47,14 @@ export const uploadImage = async (e) => {
   task.on(
     'state_changed',
     (snapshot) => {
-      console.log(snapshot.bytesTransferred);
-
-      /* progress */
+      console.log(snapshot);
     },
     (error) => {
       console.log(error);
       /* error */
     },
     () => {
+      console.log('Success');
       getDownloadURL(fileRef)
         .then((url) => {
           addDoc(collection(db, 'galleryImages/'), {
@@ -65,13 +63,25 @@ export const uploadImage = async (e) => {
           });
         })
         .catch((error) => {
-          // A full list of error codes is available at
           // https://firebase.google.com/docs/storage/web/handle-errors
           console.log(error);
         });
     }
   );
 };
+
+// export const loadGallery = async () => {
+//   // const images = ref([]);
+//   const docRef = doc(db, 'galleryImages/');
+//   const docSnap = await getDoc(docRef);`
+//   if (docSnap.exists()) {
+//     console.log('Document data:', docSnap.data());
+//   } else {
+//     console.log('No such document!');
+//   }
+// };
+
+// loadGallery();
 
 // 'file' comes from the Blob or File API
 
@@ -146,32 +156,32 @@ export const useLoadTestimonials = () => {
   return testimonials;
 };
 
-// /* Gallery Images Crud */
-export const createGalleryImage = (galleryImage) => {
-  return galleryImageCollection.add(galleryImage);
-};
+// // /* Gallery Images Crud */
+// export const createGalleryImage = (galleryImage) => {
+//   return galleryImageCollection.add(galleryImage);
+// };
 
-export const getGalleryImage = async (id) => {
-  const galleryImage = await galleryImageCollection.doc(id).get();
-  return galleryImage.exists ? galleryImage.data() : null;
-};
+// export const getGalleryImage = async (id) => {
+//   const galleryImage = await galleryImageCollection.doc(id).get();
+//   return galleryImage.exists ? galleryImage.data() : null;
+// };
 
-export const updateGalleryImage = (id, galleryImage) => {
-  return galleryImageCollection.doc(id).update(galleryImage);
-};
+// export const updateGalleryImage = (id, galleryImage) => {
+//   return galleryImageCollection.doc(id).update(galleryImage);
+// };
 
-export const deleteGalleryImage = (id) => {
-  return galleryImageCollection.doc(id).delete();
-};
+// export const deleteGalleryImage = (id) => {
+//   return galleryImageCollection.doc(id).delete();
+// };
 
-export const useLoadGalleryImage = () => {
-  const galleryImages = ref([]);
-  const close = galleryImageCollection.onSnapshot((snapshot) => {
-    galleryImages.value = snapshot.docs.map((doc) => ({
-      id: doc.id,
-      ...doc.data(),
-    }));
-  });
-  onUnmounted(close);
-  return galleryImages;
-};
+// export const useLoadGalleryImage = () => {
+//   const galleryImages = ref([]);
+//   const close = galleryImageCollection.onSnapshot((snapshot) => {
+//     galleryImages.value = snapshot.docs.map((doc) => ({
+//       id: doc.id,
+//       ...doc.data(),
+//     }));
+//   });
+//   onUnmounted(close);
+//   return galleryImages;
+// };
