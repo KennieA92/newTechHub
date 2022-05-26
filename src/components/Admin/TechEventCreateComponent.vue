@@ -1,25 +1,36 @@
 <template>
   <div class="card card-body mt-4">
     <!-- using @submit as a click function - add prevent to stop from refreshing page -->
-    <form @submit.prevent="onSubmit">    
+    <form @submit.prevent="onSubmit">
       <div class="form-group">
+
         <label>Name</label>
-        <input 
-          type="text" 
-          v-model="form.name" 
-          class="form-control" 
-          required 
-        />
+        <input type="text" v-model="form.name" class="form-control" required />
       </div>
 
       <div class="form-group mt-3">
-        <label>Task</label>
-        <input 
-          type="text"
-          class="form-control"
-          v-model="form.task"
-          required
-        />
+        <label>Description</label>
+        <input type="text" class="form-control" v-model="form.description" required />
+      </div>
+      <div class="form-group mt-3">
+        <label>Date</label>
+        <input type="date" class="form-control" v-model="form.date" required />
+      </div>
+      <div class="form-group mt-3">
+        <label>City</label>
+        <input type="text" class="form-control" v-model="form.location.city" required />
+      </div>
+      <div class="form-group mt-3">
+        <label>Street</label>
+        <input type="text" class="form-control" v-model="form.location.street" required />
+      </div>
+      <div class="form-group mt-3">
+        <label>ImgUrl</label>
+        <input type="text" class="form-control" v-model="form.imgUrl" required />
+      </div>
+      <div class="form-group mt-3">
+        <label>Genre</label>
+        <input type="text" class="form-control" v-model="form.genre" required />
       </div>
 
       <button type="submit" class="btn btn-success mt-3">
@@ -31,24 +42,38 @@
 
 <script>
 import { reactive } from 'vue'
-import {createTechEvent } from '@/firebase.js' // maybe this make error
-  export default {
-   setup() {
-     const form = reactive({
-       name: '',
-       task: ''
-     })
-     const onSubmit = async () => {
-       // spread operator to add field + invoking our createTechEvent function from firebase.js
-       await createTechEvent({ ...form }) 
-       // after create - empty input field
-       form.name = ''
-       form.task = ''
-     }
-     return { form, onSubmit }
-   } 
+import { createTechEvent } from '@/firebase.js' // maybe this make error
+export default {
+  setup() {
+    const form = reactive({
+      name: '',
+      description: '',
+      date: '',
+      location: {
+        city: '',
+        street: ''
+      },
+      imgUrl: '',
+      genre: ''
+    })
+    const onSubmit = async () => {
+      // spread operator to add field + invoking our createTechEvent function from firebase.js
+      await createTechEvent({ ...form })
+      // after create - empty input field
+      form.name = ''
+      form.description = ''
+      form.date = ''
+      form.location = ''
+      form.imgUrl = ''
+      form.genre = ''
+    }
+    return { form, onSubmit }
   }
+}
 </script>
 
 <style lang="scss" scoped>
+form {
+  color: black;
+}
 </style>

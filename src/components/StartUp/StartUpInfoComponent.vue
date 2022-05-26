@@ -7,7 +7,7 @@
                 <span>Tech
                     Startups</span> in the region.
             </p>
-            <a href="#startup-signup-section" class="button "> Contact us </a>
+            <a href="#startup-signup-section" class="button "> CONTACT US </a>
         </div>
     </section>
 </template>
