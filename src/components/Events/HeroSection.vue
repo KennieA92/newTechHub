@@ -3,7 +3,7 @@
     <section id="hero-section" class="d-flex min-vh-100 col-md-12">
       <div class="container d-flex align-items-center">
         <div class="row align-items-center">
-          <div id="hero-info" class="col-4">
+          <div id="hero-info" class="col-4 mt-5">
             <h1 class="text-left">Hello World</h1>
             <p class="text-left">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea nulla
@@ -11,7 +11,7 @@
               dolor eos?
             </p>
           </div>
-          <div id="hero-img" class="col d-flex justify-content-end">
+          <div id="hero-img" class="col col-m-3 d-flex justify-content-end">
             <img src="../../assets/bubbles.png" width="700px" alt="" />
           </div>
         </div>
