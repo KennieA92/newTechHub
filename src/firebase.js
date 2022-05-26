@@ -2,7 +2,7 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 import { ref as firebaseRef, getStorage } from 'firebase/storage';
-import { doc, setDoc } from 'firebase/firestore';
+import { collection, addDoc, storage } from 'firebase/firestore';
 import { ref, onUnmounted } from 'vue';
 
 const config = {
@@ -15,24 +15,23 @@ const config = {
 };
 
 const firebaseApp = firebase.initializeApp(config);
-
 const db = firebaseApp.firestore();
 const techEventCollection = db.collection('techEvents'); // grab the collection from firestore
-
 const testimonialCollection = db.collection('testimonials');
+const storageRef = getStorage(storage);
+console.log(storageRef);
 // const galleryImageCollection = db.collection('galleryImages')
 
 // create an event by using the add prototype from firebase
 // Add a event to the event collection
 
 // Image
-const storageRef = getStorage();
 
 export const uploadImage = async (e) => {
   // Get a reference to the storage service, which is used to create references in your storage bucket
 
   // Create a storage reference from our storage service
-  const imagesRef = firebaseRef(storageRef, 'images');
+  const imagesRef = firebaseRef(storageRef, 'gallery');
   console.log(imagesRef);
   const file = e.dataTransfer.files[0];
 
@@ -40,13 +39,13 @@ export const uploadImage = async (e) => {
   const fileRef = storageUpload.child(file.name);
   const task = fileRef.put(file);
 
-  setDoc(doc(db, 'techEvents', 'NsjCtU4WP3zy3vOyOwxf'), {
+  addDoc(collection(db, 'gallery/'), {
     img: file.name,
   });
   task.on(
     'state_changed',
     (snapshot) => {
-      console.log(snapshot._delegate.state);
+      console.log(snapshot.bytesTransferred);
 
       /* progress */
     },
@@ -62,17 +61,7 @@ export const uploadImage = async (e) => {
   );
 };
 
-export const getImages = async () => {
-  let gallery = ref([]);
-  const gsReference = firebaseRef(
-    storageRef,
-    'gs://techhub-exam.appspot.com/images/'
-  );
-  console.log(gsReference);
-  console.log(gallery);
-};
-
-getImages();
+// getImages();
 
 // 'file' comes from the Blob or File API
 
