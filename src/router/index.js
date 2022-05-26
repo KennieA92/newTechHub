@@ -4,6 +4,7 @@ import LoginView from '../views/LoginView.vue';
 import EditTechEventView from '../views/EditTechEventView.vue';
 import TechStartUpView from '../views/TechStartUpView.vue';
 import ContactUsView from '../views/ContactUsView.vue';
+import GalleryView from '../views/GalleryView.vue';
 
 const routes = [
   {
@@ -43,6 +44,10 @@ const routes = [
     path: '/contact',
     name: 'contact',
     component: ContactUsView,
+  }, {
+    path: '/gallery',
+    name: 'gallery',
+    component: GalleryView,
   },
 ];
 
