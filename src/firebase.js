@@ -18,9 +18,12 @@ const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 const techEventCollection = db.collection('techEvents'); // grab the collection from firestore
 const testimonialCollection = db.collection('testimonials');
+
 const storageRef = getStorage(storage);
 console.log(storageRef);
 // const galleryImageCollection = db.collection('galleryImages')
+
+const galleryImageCollection = db.collection('galleryImages');
 
 // create an event by using the add prototype from firebase
 // Add a event to the event collection
@@ -139,31 +142,31 @@ export const useLoadTestimonials = () => {
 };
 
 // /* Gallery Images Crud */
-// export const createGalleryImage = galleryImage => {
-//     return galleryImageCollection.add(galleryImage)
-// }
+export const createGalleryImage = (galleryImage) => {
+  return galleryImageCollection.add(galleryImage);
+};
 
-// export const getGalleryImage = async id => {
-//     const galleryImage = await galleryImageCollection.doc(id).get()
-//     return galleryImage.exists ? galleryImage.data() : null
-// }
+export const getGalleryImage = async (id) => {
+  const galleryImage = await galleryImageCollection.doc(id).get();
+  return galleryImage.exists ? galleryImage.data() : null;
+};
 
-// export const updateGalleryImage = (id, galleryImage) => {
-//     return galleryImageCollection.doc(id).update(galleryImage)
-// }
+export const updateGalleryImage = (id, galleryImage) => {
+  return galleryImageCollection.doc(id).update(galleryImage);
+};
 
-// export const deleteGalleryImage = id => {
-//     return galleryImageCollection.doc(id).delete()
-// }
+export const deleteGalleryImage = (id) => {
+  return galleryImageCollection.doc(id).delete();
+};
 
-// export const useLoadGalleryImage = () => {
-//     const galleryImages = ref([])
-//     const close = galleryImageCollection.onSnapshot(snapshot => {
-//         galleryImages.value = snapshot.docs.map(doc => ({
-//             id: doc.id,
-//             ...doc.data()
-//         }))
-//     })
-//     onUnmounted(close)
-//     return galleryImages
-// }
+export const useLoadGalleryImage = () => {
+  const galleryImages = ref([]);
+  const close = galleryImageCollection.onSnapshot((snapshot) => {
+    galleryImages.value = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+  });
+  onUnmounted(close);
+  return galleryImages;
+};

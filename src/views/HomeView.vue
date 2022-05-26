@@ -5,7 +5,7 @@
     <WhatWeDoComponent />
     <TestimonialsComponent />
     <OurPartnersComponent />
-    <!-- <SubscriptionComponent /> -->
+    <SubscriptionComponent />
   </div>
 </template>
 
@@ -16,7 +16,7 @@ import MissionComponent from "@/components/Home/MissionComponent.vue";
 import WhatWeDoComponent from "@/components/Home/WhatWeDoComponent.vue";
 import TestimonialsComponent from "@/components/Home/TestimonialsComponent.vue";
 import OurPartnersComponent from "@/components/Home/OurPartnersComponent.vue";
-// import SubscriptionComponent from '../components/Home/SubscriptionComponent.vue'
+import SubscriptionComponent from '../components/Home/SubscriptionComponent.vue'
 
 export default {
   name: "HomeView",
@@ -26,7 +26,7 @@ export default {
     WhatWeDoComponent,
     TestimonialsComponent,
     OurPartnersComponent,
-    // SubscriptionComponent
+    SubscriptionComponent
   },
 };
 </script>

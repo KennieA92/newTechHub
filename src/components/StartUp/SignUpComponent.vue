@@ -1,8 +1,7 @@
 <template>
     <section id="startup-signup-section">
         <div class="main-container d-flex flex-wrap col-12 justify-content-center">
-            <h1 class="col-12 py-3">Contact Us</h1>
-
+            <h1 class="col-12 py-4">Contact Us</h1>
             <form action="submit" class="contact-form d-flex col-10 col-md-6 justify-content-center flex-wrap">
                 <div class="content-container d-flex flex-column col-10 col-md-10">
                     <label class="align-self-start " for="Email">Email Adress</label>
@@ -29,7 +28,8 @@
                         </div>
                     </div>
                 </div>
-                <div><input type="submit" value="Subscribe" name="subscribe" class="button">
+                <div class="col-10 justify-content-center align-items-center d-flex"><input type="submit"
+                        value="Subscribe" name="subscribe" class="button">
                 </div>
 
             </form>
@@ -50,7 +50,6 @@ export default {
         padding: 5vh 0;
         margin-bottom: 5vh;
         background: rgba(black, 0.4);
-        border-radius: 25px;
         backdrop-filter: blur(10px);
 
         p {

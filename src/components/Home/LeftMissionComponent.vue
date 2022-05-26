@@ -45,7 +45,7 @@ export default {
     }
 
     @media only screen and (max-width: 600px) {
-        height: 15vh;
+        height: 20vh;
     }
 }
 </style>

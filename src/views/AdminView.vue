@@ -17,6 +17,8 @@
     <TestimonialCreateComponent />
     <TestimonialListComponent />
 
+    <GalleryCreateComponent />
+
 
   </div>
 </template>
@@ -32,12 +34,14 @@ import TechEventCreate from "@/components/Admin/TechEventCreateComponent.vue";
 import TechEventList from "@/components/Admin/TechEventListComponent.vue";
 import { uploadImage } from "@/firebase.js";
 import TestimonialCreateComponent from "@/components/Admin/TestimonialCreateComponent.vue";
+import GalleryCreateComponent from "@/components/Admin/GalleryCreateComponent.vue";
 export default {
   name: "HomeView",
   components: {
     TechEventCreate,
     TechEventList,
-    TestimonialCreateComponent
+    TestimonialCreateComponent,
+    GalleryCreateComponent
   },
   setup() {
     const router = useRouter();
@@ -77,6 +81,7 @@ export default {
 <style lang='scss'>
 .box {
   .admin {
+    padding-top: 10vh;
     color: black;
   }
 
