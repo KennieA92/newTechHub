@@ -20,11 +20,18 @@
 <script>
 import LeftStartUpComponent from '../StartUp/LeftStartUpComponent.vue';
 import RightStartUpComponent from '../StartUp/RightStartUpComponent.vue';
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
     components: {
         RightStartUpComponent,
         LeftStartUpComponent
     },
+    setup() {
+        AOS.init()
+    }
+
 }
 </script>
 

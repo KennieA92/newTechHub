@@ -22,11 +22,17 @@
 <script>
 import LeftMissionComponent from '@/components/Home/LeftMissionComponent.vue'
 import RightMissionComponent from '@/components/Home/RightMissionComponent.vue'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
     components: {
         LeftMissionComponent,
         RightMissionComponent
     },
+    setup() {
+        AOS.init()
+    }
 }
 </script>
     

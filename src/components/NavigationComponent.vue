@@ -69,22 +69,17 @@ nav {
   position: fixed;
   top: 0;
   z-index: 5;
-  height: 8vh;
+  height: 80px;
   overflow-x: visible;
 
-  @media only screen and (max-width: 1200px) {
-    height: 12vh;
-  }
+  @media only screen and (max-width: 1200px) {}
 
-  @media only screen and (max-width: 600px) {
-    height: 12vh;
-  }
+  @media only screen and (max-width: 600px) {}
 
   a {
     font-size: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    padding: 1.05rem;
 
     &:hover {
       color: $tertiary-color;
@@ -99,27 +94,21 @@ nav {
 
 
     @media only screen and (max-width: 600px) {
-      height: 10vh;
-      margin-top: 1.6vh;
 
       background: rgba(darken($primary-color, 25), 0.85);
       backdrop-filter: blur(10px);
 
       .nav-item {
         .nav-link {
-          padding-left: 2rem;
-          padding-right: 0.5rem;
 
-          a {
-            font-size: 1rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            padding: 1.05rem;
+          font-size: 1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 1.05rem;
 
-            &:hover {
-              color: $tertiary-color;
-              text-decoration: none;
-            }
+          &:hover {
+            color: $tertiary-color;
+            text-decoration: none;
           }
         }
 
@@ -163,7 +152,7 @@ nav {
 
   .navbar-brand {
     img {
-      height: 6vh;
+      height: 60px;
     }
   }
 
