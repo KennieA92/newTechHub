@@ -45,7 +45,7 @@ export default {
     }
 
     img {
-        height: 14vh;
+        height: 10vh;
     }
 
     @media only screen and (max-width: 600px) {
@@ -65,6 +65,7 @@ export default {
         }
 
         img {
+            height: 14vh;
             margin: 5vh 0;
         }
     }

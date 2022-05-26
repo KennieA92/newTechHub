@@ -47,15 +47,12 @@ export default {
         background: linear-gradient(to bottom right, $primary-color 0%, $primary-color 50%, $secondary-color 50%, $secondary-color 100%);
         padding-bottom: 6vh;
 
-        border-radius: 25px;
-
         .subscription-logo {
             margin-bottom: 1.2vw;
         }
 
         .subscription-container {
             padding: 2vw 0;
-            border-radius: 25px;
 
 
 
@@ -64,7 +61,7 @@ export default {
 
             input[type=text],
             input[type=email] {
-                border-radius: 20px;
+
                 text-align: center;
                 background: rgba($quaternary-color, 0.8);
 
