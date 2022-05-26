@@ -25,6 +25,7 @@ export default {
 
 <style lang="scss" scoped>
 .start-ups {
+    padding-top: 8vh;
     background: linear-gradient(to bottom,
             $primary-color,
             40%,

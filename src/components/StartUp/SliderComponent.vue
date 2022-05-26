@@ -68,29 +68,4 @@ export default {
         }
     }
 }
-
-
-@media only screen and (max-width: 550px) {
-    .carousel-inner {
-        margin-top: 8vh;
-        height: 30vh;
-
-        .carousel-item {
-            h1 {
-                font-size: 1.3rem;
-
-            }
-
-            p {
-                font-size: 1rem;
-            }
-
-            img {
-                object-fit: scale-down;
-                object-position: unset;
-
-            }
-        }
-    }
-}
 </style>
