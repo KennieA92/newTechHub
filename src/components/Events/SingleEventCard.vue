@@ -1,7 +1,11 @@
 <template>
   <EventModalWindow v-if="showModal" @close="toggleModal" />
-  <div class="col-3">
+  <div class="col-xl-3">
     <div @click="toggleModal" class="card">
+      <div id="date">
+        <p class="date-text">19</p>
+        <h4 class="date-text">May</h4>
+      </div>
       <img
         :src="require('@/assets/StartUp/Image3.png')"
         class="card-img-top"
@@ -45,6 +49,23 @@ export default {
   }
   .kind {
     margin: 5px 0;
+  }
+  #date {
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    margin: 20px;
+    border-radius: 10px;
+    background: $primary-color;
+    color: $quaternary-color;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .date-text {
+      margin: 0;
+      font-size: 1.5rem;
+    }
   }
 }
 </style>

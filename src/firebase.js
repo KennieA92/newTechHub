@@ -19,25 +19,25 @@ const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 const techEventCollection = db.collection('techEvents'); // grab the collection from firestore
 
-const testimonialCollection = db.collection('testimonials')
+const testimonialCollection = db.collection('testimonials');
 // const galleryImageCollection = db.collection('galleryImages')
 
 // create an event by using the add prototype from firebase
 // Add a event to the event collection
 
 // Image
-const storage = getStorage();
+const storageRef = getStorage();
 
 export const uploadImage = async (e) => {
   // Get a reference to the storage service, which is used to create references in your storage bucket
 
   // Create a storage reference from our storage service
-  const storageRef = firebaseRef(storage, 'images');
-  console.log(storageRef);
-
+  const imagesRef = firebaseRef(storageRef, 'images');
+  console.log(imagesRef);
   const file = e.dataTransfer.files[0];
+
   const storageUpload = firebase.storage().ref();
-  const fileRef = storageUpload.child('images/' + file.name);
+  const fileRef = storageUpload.child(file.name);
   const task = fileRef.put(file);
 
   setDoc(doc(db, 'techEvents', 'NsjCtU4WP3zy3vOyOwxf'), {
@@ -61,6 +61,17 @@ export const uploadImage = async (e) => {
     }
   );
 };
+
+export const getImages = async () => {
+  const gsReference = firebaseRef(
+    storageRef,
+    'gs://techhub-exam.appspot.com/images/'
+  );
+  console.log(gsReference);
+};
+
+getImages();
+
 // 'file' comes from the Blob or File API
 
 export const createTechEvent = (techEvent) => {
@@ -92,6 +103,7 @@ export const deleteTechEvent = (id) => {
 export const useLoadTechEvents = () => {
   const techEvents = ref([]);
   const close = techEventCollection.onSnapshot((snapshot) => {
+    console.log(snapshot);
     techEvents.value = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
@@ -106,34 +118,34 @@ export const useLoadTechEvents = () => {
 };
 
 // /* Testimonial Crud */
-export const createTestimonial = testimonial => {
-  return testimonialCollection.add(testimonial)
-}
+export const createTestimonial = (testimonial) => {
+  return testimonialCollection.add(testimonial);
+};
 
-export const getTestimonial = async id => {
-  const testimonial = await testimonialCollection.doc(id).get()
-  return testimonial.exists ? testimonial.data() : null
-}
+export const getTestimonial = async (id) => {
+  const testimonial = await testimonialCollection.doc(id).get();
+  return testimonial.exists ? testimonial.data() : null;
+};
 
 export const updateTestimonial = (id, testimonial) => {
-  return testimonialCollection.doc(id).update(testimonial)
-}
+  return testimonialCollection.doc(id).update(testimonial);
+};
 
-export const deleteTestimonial = id => {
-  return testimonialCollection.doc(id).delete()
-}
+export const deleteTestimonial = (id) => {
+  return testimonialCollection.doc(id).delete();
+};
 
 export const useLoadTestimonials = () => {
-  const testimonials = ref([])
-  const close = testimonialCollection.onSnapshot(snapshot => {
-    testimonials.value = snapshot.docs.map(doc => ({
+  const testimonials = ref([]);
+  const close = testimonialCollection.onSnapshot((snapshot) => {
+    testimonials.value = snapshot.docs.map((doc) => ({
       id: doc.id,
-      ...doc.data()
-    }))
-  })
-  onUnmounted(close)
-  return testimonials
-}
+      ...doc.data(),
+    }));
+  });
+  onUnmounted(close);
+  return testimonials;
+};
 
 // /* Gallery Images Crud */
 // export const createGalleryImage = galleryImage => {
