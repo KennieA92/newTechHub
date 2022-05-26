@@ -50,7 +50,4 @@ export default {
   transform: translate(-50%, -50%);
   width: 70vh;
 }
-.card {
-  border-radius: 30px;
-}
 </style>

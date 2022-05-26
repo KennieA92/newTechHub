@@ -63,11 +63,13 @@ export const uploadImage = async (e) => {
 };
 
 export const getImages = async () => {
+  let gallery = ref([]);
   const gsReference = firebaseRef(
     storageRef,
     'gs://techhub-exam.appspot.com/images/'
   );
   console.log(gsReference);
+  console.log(gallery);
 };
 
 getImages();

@@ -40,13 +40,10 @@ export default {
 </script>
 <style lang="scss" scoped>
 .card {
-  border-radius: 30px;
   background: $primary-color;
   color: $quaternary-color;
   height: 400px;
-  .card-img-top {
-    border-radius: 30px 30px 0 0;
-  }
+
   .kind {
     margin: 5px 0;
   }
@@ -55,7 +52,6 @@ export default {
     height: 90px;
     position: absolute;
     margin: 20px;
-    border-radius: 10px;
     background: $primary-color;
     color: $quaternary-color;
     display: flex;
