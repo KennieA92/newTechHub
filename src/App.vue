@@ -19,7 +19,8 @@ export default {
 
 <style lang="scss">
 * {
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto", Avenir, Helvetica, Arial, sans-serif;
+  font-display: swap;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -31,7 +32,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Aqua Grotesque", sans-serif;
+  font-family: "Aqua Grotesque", Avenir, Helvetica, Arial, sans-serif;
+  font-display: swap;
 }
 
 @font-face {

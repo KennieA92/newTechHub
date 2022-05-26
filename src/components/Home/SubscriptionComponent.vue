@@ -49,6 +49,7 @@ export default {
 
         .subscription-logo {
             margin-bottom: 1.2vw;
+            height: 100%;
         }
 
         .subscription-container {
