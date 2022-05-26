@@ -20,7 +20,7 @@
                         <label for="mce-EMAIL">Email Address</label>
                         <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Write your email">
                     </div>
-                    <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                    <div><input type="submit" value="SUBSCRIBE" name="subscribe" id="mc-embedded-subscribe"
                             class="button">
                     </div>
                 </div>
@@ -56,7 +56,7 @@ export default {
 
 
 
-            background: rgba(black, 0.4);
+            background: rgba(black, 0.3);
             backdrop-filter: blur(10px);
 
             input[type=text],

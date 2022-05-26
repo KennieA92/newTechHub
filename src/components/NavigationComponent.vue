@@ -72,6 +72,10 @@ nav {
   height: 8vh;
   overflow-x: visible;
 
+  @media only screen and (max-width: 1200px) {
+    height: 12vh;
+  }
+
   @media only screen and (max-width: 600px) {
     height: 12vh;
   }

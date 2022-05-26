@@ -1,42 +1,31 @@
 <template>
   <Transition name="changebackground">
-    <section
-      id="hero-section"
-      class="
+    <section id="hero-section" class="
         hero-section
         justify-content-center
         align-items-end
         d-flex
         min-vh-100
         col-md-12
-      "
-    >
-      <div
-        class="
+      ">
+      <div class="
           hero-info
           col-sm-8 col-md-10
           d-flex
           justify-content-sm-center
           flex-md-column
-        "
-      >
+        ">
         <video
-          src="@/assets/hero_video.mp4"
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
-        <div
-          class="
+          src="https://firebasestorage.googleapis.com/v0/b/techhub-exam.appspot.com/o/hero-video.mp4?alt=media&token=fad9d5b3-2a35-47a6-92fb-7ca5558129d6"
+          autoplay loop muted playsinline></video>
+        <div class="
             hero-info-panel
             col-sm-8 col-md-5 col-lg-4
             justify-content-end
             my-5 my-md-0
             justify-content-md-center
             align-items-center
-          "
-        >
+          ">
           <h1 class="col-sm-12 col-md-12">Techhub</h1>
           <p class="col-sm-12 col-md-12">
             We support tech startups, students and investors to grow the tech
@@ -51,7 +40,7 @@
 
 <script>
 export default {
-  setup() {},
+  setup() { },
 };
 </script>
 
@@ -72,7 +61,7 @@ export default {
       height: 100vh;
       width: 100%;
       object-fit: cover;
-      filter: brightness(75%);
+      filter: brightness(70%);
     }
 
     .hero-info-panel {
@@ -91,7 +80,6 @@ export default {
         min-height: 45px;
         background-color: $tertiary-color;
         color: $quaternary-color;
-        border-style: none;
         border-radius: 25px;
         display: flex;
         justify-content: center;
