@@ -1,7 +1,11 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
-import { ref as firebaseRef, getStorage } from 'firebase/storage';
+import {
+  ref as firebaseRef,
+  getStorage,
+  getDownloadURL,
+} from 'firebase/storage';
 import { collection, addDoc, storage } from 'firebase/firestore';
 import { ref, onUnmounted } from 'vue';
 
@@ -21,7 +25,6 @@ const testimonialCollection = db.collection('testimonials');
 
 const storageRef = getStorage(storage);
 console.log(storageRef);
-// const galleryImageCollection = db.collection('galleryImages')
 
 const galleryImageCollection = db.collection('galleryImages');
 
@@ -29,7 +32,6 @@ const galleryImageCollection = db.collection('galleryImages');
 // Add a event to the event collection
 
 // Image
-
 export const uploadImage = async (e) => {
   // Get a reference to the storage service, which is used to create references in your storage bucket
 
@@ -41,10 +43,8 @@ export const uploadImage = async (e) => {
   const storageUpload = firebase.storage().ref();
   const fileRef = storageUpload.child(file.name);
   const task = fileRef.put(file);
+  await fileRef.put(file);
 
-  addDoc(collection(db, 'gallery/'), {
-    img: file.name,
-  });
   task.on(
     'state_changed',
     (snapshot) => {
@@ -57,14 +57,21 @@ export const uploadImage = async (e) => {
       /* error */
     },
     () => {
-      console.log('amazing');
-      console.log(file);
-      /* complete */
+      getDownloadURL(fileRef)
+        .then((url) => {
+          addDoc(collection(db, 'galleryImages/'), {
+            img: file.name,
+            url: url,
+          });
+        })
+        .catch((error) => {
+          // A full list of error codes is available at
+          // https://firebase.google.com/docs/storage/web/handle-errors
+          console.log(error);
+        });
     }
   );
 };
-
-// getImages();
 
 // 'file' comes from the Blob or File API
 
@@ -76,7 +83,6 @@ export const createTechEvent = (techEvent) => {
 export const getTechEvent = async (id) => {
   const techEvent = await techEventCollection.doc(id).get();
   return techEvent.exists ? techEvent.data() : null; // firebase exist method (like include/contains)
-
   // Link: https://firebase.google.com/docs/reference/js/firebase.database.DataSnapshot#exists (Read this Kaloyan)
 };
 
@@ -97,7 +103,6 @@ export const deleteTechEvent = (id) => {
 export const useLoadTechEvents = () => {
   const techEvents = ref([]);
   const close = techEventCollection.onSnapshot((snapshot) => {
-    console.log(snapshot);
     techEvents.value = snapshot.docs.map((doc) => ({
       id: doc.id,
       ...doc.data(),
