@@ -16,7 +16,7 @@
           flex-md-column
         ">
         <video
-          src="https://firebasestorage.googleapis.com/v0/b/techhub-exam.appspot.com/o/hero-video.mp4?alt=media&token=fad9d5b3-2a35-47a6-92fb-7ca5558129d6"
+          src="https://firebasestorage.googleapis.com/v0/b/techhub-exam.appspot.com/o/hero-video.mp4?alt=media&token=680da7f0-2fca-4afe-89bc-47897e7fb38c"
           autoplay loop muted playsinline></video>
         <div class="
             hero-info-panel
