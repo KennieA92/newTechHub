@@ -66,12 +66,15 @@ export default {
 nav {
   background: rgba(darken($primary-color, 25), 0.65);
   backdrop-filter: blur(10px);
-
   position: fixed;
   top: 0;
   z-index: 5;
   height: 8vh;
   overflow-x: visible;
+
+  @media only screen and (max-width: 600px) {
+    height: 12vh;
+  }
 
   a {
     font-size: 1rem;
@@ -92,7 +95,9 @@ nav {
 
 
     @media only screen and (max-width: 600px) {
+      height: 10vh;
       margin-top: 1.6vh;
+
       background: rgba(darken($primary-color, 25), 0.85);
       backdrop-filter: blur(10px);
 
