@@ -1,15 +1,14 @@
 <template>
-<section id="ourPartners-section">
-    <!-- Vfor of all our partners-->
-</section>
+    <section id="our-partners-section">
+
+    </section>
 </template>
 
 <script>
-    export default {
-        
-    }
+export default {
+
+}
 </script>
 
 <style lang="scss" scoped>
-
 </style>

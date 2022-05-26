@@ -28,34 +28,6 @@
         </div>
     </section>
 
-    <!-- <section id="testimonials-section">
-        <div id="mc_embed_signup" class="d-flex col-12 justify-content-center ">
-            <form action="https://gmail.us14.list-manage.com/subscribe/post?u=e6613a5cf963b9588e538fb6f&id=cafafab6dc"
-                method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                class="validate d-flex col-10 col-sm-12  justify-content-center align-items-center flex-column"
-                target="_blank" novalidate>
-                <h2 class="pt-3">Subscribe for News!</h2>
-                <div class="d-flex col-8 justify-content-md-start"><img class="subscription-logo col-2 col-md-1"
-                        src="@/assets/logo.svg" alt="">
-                </div>
-                <div class="subscription-container col-8 d-flex flex-column align-items-center justify-content-center">
-
-
-                    <div class="col-11">
-                        <label for="mce-FNAME">First Name</label>
-                        <input type="text" name="FNAME" id="mce-FNAME" placeholder="Write your name">
-                    </div>
-                    <div class="col-11">
-                        <label for="mce-EMAIL">Email Address</label>
-                        <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Write your email">
-                    </div>
-                    <div><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
-                            class="button">
-                    </div>
-                </div>
-            </form>
-        </div>
-    </section> -->
 
 </template>
 
@@ -78,32 +50,30 @@ export default {
         border-radius: 25px;
 
         .subscription-logo {
-            margin-bottom: 1vw;
+            margin-bottom: 1.2vw;
         }
 
         .subscription-container {
             padding: 2vw 0;
             border-radius: 25px;
 
-            color: black;
-            background: rgba($quaternary-color, 0.9);
 
 
-            // background: rgba(black, 0.4);
-            // backdrop-filter: blur(10px);
+            background: rgba(black, 0.4);
+            backdrop-filter: blur(10px);
 
-            // input[type=text],
-            // input[type=email] {
-            //     border-radius: 20px;
-            //     text-align: center;
-            //     background: rgba($quaternary-color, 0.8);
+            input[type=text],
+            input[type=email] {
+                border-radius: 20px;
+                text-align: center;
+                background: rgba($quaternary-color, 0.8);
 
-            //     &:focus {
-            //         outline: 3px solid $tertiary-color;
-            //         border: none;
-            //     }
+                &:focus {
+                    outline: 3px solid $tertiary-color;
+                    border: none;
+                }
 
-            // }
+            }
 
         }
 

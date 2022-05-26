@@ -6,16 +6,16 @@
             </h1>
         </div>
         <RightMissionComponent data-aos="fade-left" content-text="To facilitate events for tech startups and offer access to investors and students in the southern
-                region." imgUrl="mission-placeholder" />
+                region." imgUrl="mission_icon1" />
         <LeftMissionComponent data-aos="fade-right"
             content-text="To strengthen the startup and tech eco-system in the southern region through a powerful community."
-            imgUrl="mission-placeholder" />
+            imgUrl="mission_icon2" />
         <LeftMissionComponent data-aos="fade-right"
             content-text="Match commercial founders with tech founders to create new tech ventures."
-            imgUrl="mission-placeholder" />
+            imgUrl="mission_icon3" />
         <RightMissionComponent data-aos="fade-left"
             content-text="Inspire with inspirational talks from successful tech founders, industry leaders and business angels."
-            imgUrl="mission-placeholder" />
+            imgUrl="mission_icon4" />
     </section>
 </template>
 

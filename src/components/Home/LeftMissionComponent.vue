@@ -1,7 +1,7 @@
 <template>
     <div class="main-container d-flex col-12 col-md-12">
         <div class="content-container col-12 col-md-10 d-flex flex-row-reverse align-items-center">
-            <img class="col-3 col-sm-2 col-md-1" :src="resolve_img_url(imgUrl)" alt="">
+            <img class="col-2 col-sm-2 col-md-1" :src="resolve_img_url(imgUrl)" alt="">
             <p class="col-6">
                 {{ contentText }}
             </p>
@@ -17,7 +17,7 @@ export default {
     },
     setup() {
         const resolve_img_url = (imgUrl) => {
-            return require('@/assets/' + imgUrl + '.svg')
+            return require('@/assets/Home/' + imgUrl + '.svg')
         }
         return {
             resolve_img_url
@@ -30,8 +30,6 @@ export default {
 <style lang="scss" scoped>
 .content-container {
     background: $secondary-color;
-    border-top-right-radius: 100px;
-    border-bottom-right-radius: 100px;
     margin: 0.5vh 0;
     height: 15vh;
 
@@ -43,10 +41,11 @@ export default {
 
     img {
         height: 10vh;
+        padding-right: 2vw;
     }
 
     @media only screen and (max-width: 600px) {
-        height: 20vh;
+        height: 15vh;
     }
 }
 </style>

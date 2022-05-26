@@ -21,7 +21,7 @@ export default {
     },
     setup() {
         const resolve_img_url = (imgUrl) => {
-            return require('@/assets/' + imgUrl + '.svg')
+            return require('@/assets/Home/' + imgUrl + '.svg')
         }
         return {
             resolve_img_url
@@ -34,8 +34,6 @@ export default {
 <style lang="scss" scoped>
 .content-container {
     background: $secondary-color;
-    border-top-right-radius: 200px;
-    border-bottom-right-radius: 200px;
     margin: 0.5vh 0;
     min-height: 25vh;
 
@@ -46,13 +44,14 @@ export default {
 
     }
 
+
     img {
-        height: 22vh;
+        height: 14vh;
+        color: $quaternary-color;
     }
 
     @media only screen and (max-width: 600px) {
         height: 90vh;
-        border-radius: 0;
         display: flex !important;
         flex-wrap: wrap;
         flex-direction: column !important;
