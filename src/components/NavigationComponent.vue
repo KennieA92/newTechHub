@@ -72,10 +72,6 @@ nav {
   height: 80px;
   overflow-x: visible;
 
-  @media only screen and (max-width: 1200px) {}
-
-  @media only screen and (max-width: 600px) {}
-
   a {
     font-size: 1rem;
     font-weight: bold;

@@ -14,7 +14,7 @@ export default {
 <style lang="scss" scoped>
 .contact-us {
     min-height: 100vh;
-    padding-top: 12vh;
+    padding-top: 80px;
     background: linear-gradient(to bottom,
             $secondary-color,
             40%,

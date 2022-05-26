@@ -79,14 +79,16 @@ export default {
 </script>
 
 <style lang='scss'>
-.box {
-  .admin {
-    padding-top: 10vh;
-    color: black;
-  }
+.admin {
+  padding-top: 80px;
+  color: black;
 
-  height: 500px;
-  width: 500px;
-  background: pink;
+  .box {
+
+
+    height: 500px;
+    width: 500px;
+    background: pink;
+  }
 }
 </style>
