@@ -1,5 +1,5 @@
 <template>
-    <section id="testimonials-section">
+    <section id="subscription-section">
         <div id="mc_embed_signup" class="d-flex col-12 justify-content-center ">
             <form action="https://gmail.us14.list-manage.com/subscribe/post?u=e6613a5cf963b9588e538fb6f&id=cafafab6dc"
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"

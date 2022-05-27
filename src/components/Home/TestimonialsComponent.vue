@@ -25,7 +25,8 @@ export default {
 
 <style lang="scss" scoped>
 #testimonials-section {
-    margin-top: 7.5vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 
     h1 {
         margin-top: 5vh;

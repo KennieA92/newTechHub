@@ -15,23 +15,21 @@
           justify-content-sm-center
           flex-md-column
         ">
-        <video
-          src="https://firebasestorage.googleapis.com/v0/b/techhub-exam.appspot.com/o/hero-video.mp4?alt=media&token=680da7f0-2fca-4afe-89bc-47897e7fb38c"
-          autoplay loop muted playsinline></video>
+        <video src="@/assets/Home/hero-video.mp4" autoplay loop muted playsinline></video>
         <div class="
             hero-info-panel
             col-sm-8 col-md-5 col-lg-4
             justify-content-end
-            my-5 my-md-0
+             my-md-0
             justify-content-md-center
             align-items-center
           ">
-          <h1 class="col-sm-12 col-md-12">Techhub</h1>
+          <h1 class="col-sm-12 col-md-12"> StartUp</h1>
           <p class="col-sm-12 col-md-12">
             We support tech startups, students and investors to grow the tech
             eco-system in southern Denmark
           </p>
-          <a href="/tickets.html" class="btn-ticket"> BUY TICKET </a>
+          <router-link to="/techStartUp" class="btn-ticket"> SEE MORE </router-link>
         </div>
       </div>
     </section>
@@ -53,6 +51,10 @@ export default {
   .hero-info {
     text-align: center;
     margin-bottom: 10vh;
+
+    @media only screen and (max-width: 600px) {
+      margin-bottom: 4vh;
+    }
 
     video {
       position: absolute;

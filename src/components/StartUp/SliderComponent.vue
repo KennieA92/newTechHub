@@ -55,15 +55,13 @@ export default {
     .carousel-item {
         height: 100%;
 
-        .carousel-caption {
-            backdrop-filter: blur(5px);
-        }
+        .carousel-caption {}
 
         img {
             height: 100%;
             object-fit: cover;
             object-position: top center;
-            filter: brightness(0.50);
+            filter: brightness(0.40);
 
         }
     }
