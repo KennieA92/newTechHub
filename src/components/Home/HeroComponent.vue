@@ -53,12 +53,13 @@ export default {
     margin-bottom: 10vh;
 
     @media only screen and (max-width: 600px) {
-      margin-bottom: 4vh;
+      margin-bottom: 6vh;
+
+      @media only screen and (min-height: 750px) {
+        margin-bottom: 10vh;
+      }
     }
 
-    @media only screen and (max-width: 600px) and (min-height: 700px) {
-      margin-bottom: 10vh;
-    }
 
     video {
       position: absolute;

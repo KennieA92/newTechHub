@@ -71,6 +71,10 @@ nav {
   height: 80px;
   overflow-x: visible;
 
+  @media only screen and (max-width: 600px) {
+    height: 90px;
+  }
+
   a {
     font-size: 1rem;
     font-weight: bold;
@@ -135,7 +139,6 @@ nav {
 
 
     @media only screen and (max-width: 600px) {
-
       background: rgba(darken($primary-color, 25), 0.85);
       backdrop-filter: blur(10px);
 
