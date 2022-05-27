@@ -5,7 +5,7 @@
         <a class="navbar-brand col-3 d-flex" href="/"><img src="../assets/logo.svg" alt="logo" />
           <div class="brand-name d-flex flex-column align-items-center justify-content-center">
             <p>TECHHUB</p>
-            <p>SYD</p>
+            <p class="align-self-start">SYD</p>
           </div>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
@@ -172,6 +172,9 @@ nav {
   }
 
   .brand-name {
+
+    padding-left: 0.5rem;
+
     p {
       font-size: 1.2rem;
       font-weight: bold;

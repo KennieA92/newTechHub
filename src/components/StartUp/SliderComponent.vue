@@ -55,8 +55,6 @@ export default {
     .carousel-item {
         height: 100%;
 
-        .carousel-caption {}
-
         img {
             height: 100%;
             object-fit: cover;
