@@ -22,6 +22,7 @@ const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 const techEventCollection = db.collection('techEvents'); // grab the collection from firestore
 const testimonialCollection = db.collection('testimonials');
+const galleryImageCollection = db.collection('galleryImages');
 
 const storageRef = getStorage(storage);
 console.log(storageRef);
@@ -70,20 +71,20 @@ export const uploadImage = async (e) => {
   );
 };
 
-// export const loadGallery = async () => {
-//   // const images = ref([]);
-//   const docRef = doc(db, 'galleryImages/');
-//   const docSnap = await getDoc(docRef);`
-//   if (docSnap.exists()) {
-//     console.log('Document data:', docSnap.data());
-//   } else {
-//     console.log('No such document!');
-//   }
-// };
+export const useImages = () => {
+  const images = ref([]);
+  const close = galleryImageCollection.onSnapshot((snapshot) => {
+    images.value = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+  });
+  onUnmounted(close);
+  console.log(images);
+  return images;
+};
 
-// loadGallery();
-
-// 'file' comes from the Blob or File API
+useImages();
 
 export const createTechEvent = (techEvent) => {
   return techEventCollection.add(techEvent);
