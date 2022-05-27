@@ -29,7 +29,7 @@
             We support tech startups, students and investors to grow the tech
             eco-system in southern Denmark
           </p>
-          <router-link to="/techStartUp" class="btn-ticket"> SEE MORE </router-link>
+          <router-link to="/techStartUp" class="btn-ticket"> STARTUPS </router-link>
         </div>
       </div>
     </section>
@@ -70,8 +70,6 @@ export default {
       display: flex;
       z-index: 2;
       flex-direction: column;
-
-      backdrop-filter: blur(2px);
 
       @media only screen and (max-width: 600px) {
         width: 80vw;

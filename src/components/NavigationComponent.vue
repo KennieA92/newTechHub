@@ -1,7 +1,7 @@
 <template>
   <div class="col-12 d-flex justify-content-center" v-if="showNavbar">
     <nav class="navbar navbar-expand-lg col-12 col-sm-12 col-md-12">
-      <div class="d-flex container-fluid justify-content-md-between col-10 px-0">
+      <div class="d-flex container-fluid justify-content-md-around col-10 px-0">
         <a class="navbar-brand col-3 d-flex" href="/"><img src="../assets/logo.svg" alt="logo" />
           <div class="brand-name d-flex flex-column align-items-center justify-content-center">
             <p>TECHHUB</p>
@@ -16,12 +16,6 @@
         </button>
         <div class="collapse navbar-collapse col-md-10 justify-content-end" id="navbarTogglerDemo02">
           <ul class="navbar-nav mb-2 mb-lg-0">
-            <li class="nav-item">
-              <router-link class="nav-link" to="/">Home</router-link>
-            </li>
-            <li class="nav-item">
-              <router-link class="nav-link" to="/admin">Admin</router-link>
-            </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/techStartUp">Start Ups</router-link>
             </li>
@@ -172,10 +166,10 @@ nav {
   }
 
   .brand-name {
-
     padding-left: 0.5rem;
 
     p {
+      font-family: 'Quantico';
       font-size: 1.2rem;
       font-weight: bold;
       text-transform: uppercase;

@@ -1,9 +1,9 @@
 <template>
     <section id="subscription-section">
-        <div id="mc_embed_signup" class="d-flex col-12 justify-content-center ">
+        <div id="mc_embed_signup" class="d-flex col-12 justify-content-center">
             <form action="https://gmail.us14.list-manage.com/subscribe/post?u=e6613a5cf963b9588e538fb6f&id=cafafab6dc"
                 method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
-                class="validate d-flex col-10 col-sm-8  justify-content-center align-items-center flex-column"
+                class="validate d-flex col-10 col-sm-8 pt-3 justify-content-center align-items-center flex-column"
                 target="_blank" novalidate>
                 <h2 class="pt-3">Subscribe for News!</h2>
                 <div class="d-flex col-10 justify-content-md-start"><img class="subscription-logo col-2 col-md-1"

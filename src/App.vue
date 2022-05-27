@@ -32,14 +32,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Aqua Grotesque", Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Quantico', "Aqua Grotesque", Avenir, Helvetica, Arial, sans-serif;
   font-display: swap;
 }
 
-@font-face {
-  font-family: "Aqua Grotesque";
-  src: url("./assets/fonts/aqua.ttf");
-}
 
 #app {
   -webkit-font-smoothing: antialiased;

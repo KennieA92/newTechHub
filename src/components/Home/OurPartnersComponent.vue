@@ -18,22 +18,24 @@
                     <img src="@/assets/Home/company-logo3.png" alt="company-logo-3">
                 </div>
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo4.png" alt="company-logo-4">
-                </div>
-                <div class="company-logo col-6 col-sm-3">
                     <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/08/AAU_CIRCLE_ESB_blue_rgb.png?w=283&ssl=1"
                         alt="company-logo-5">
-                </div>
-                <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo6.png" alt="company-logo-6">
                 </div>
                 <div class="company-logo col-6 col-sm-3">
                     <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/04/A.-Thomsen-holding-aps-1.png?w=500&ssl=1"
                         alt="company-logo-7">
                 </div>
+
                 <div class="company-logo col-6 col-sm-3">
                     <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/11/E.-Bank-Lauridsen-Holding-A_S.png?w=500&ssl=1"
                         alt="company-logo-8">
+                </div>
+
+                <div class="company-logo col-6 col-sm-3">
+                    <img src="@/assets/Home/company-logo6.png" alt="company-logo-6">
+                </div>
+                <div class="company-logo col-6 col-sm-3">
+                    <img src="@/assets/Home/company-logo4.png" alt="company-logo-4">
                 </div>
             </div>
         </div>
@@ -65,6 +67,7 @@ export default {
 
         img {
             width: 100%;
+            height: 100%;
         }
     }
 }
