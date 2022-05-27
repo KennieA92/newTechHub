@@ -18,7 +18,7 @@
         <video src="@/assets/Home/hero-video.mp4" autoplay loop muted playsinline></video>
         <div class="
             hero-info-panel
-            col-sm-8 col-md-5 col-lg-4
+            col-sm-8 col-md-5 col-lg-3
             justify-content-end
              my-md-0
             justify-content-md-center
@@ -54,6 +54,10 @@ export default {
 
     @media only screen and (max-width: 600px) {
       margin-bottom: 4vh;
+    }
+
+    @media only screen and (max-width: 600px) and (min-height: 700px) {
+      margin-bottom: 10vh;
     }
 
     video {
