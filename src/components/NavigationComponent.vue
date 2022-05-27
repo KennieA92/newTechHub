@@ -2,7 +2,12 @@
   <div class="col-12 d-flex justify-content-center" v-if="showNavbar">
     <nav class="navbar navbar-expand-lg col-12 col-sm-12 col-md-12">
       <div class="d-flex container-fluid justify-content-md-between col-10 px-0">
-        <a class="navbar-brand col-1" href="/"><img src="../assets/logo.svg" alt="logo" /></a>
+        <a class="navbar-brand col-3 d-flex" href="/"><img src="../assets/logo.svg" alt="logo" />
+          <div class="brand-name d-flex flex-column align-items-center justify-content-center">
+            <p>TECHHUB</p>
+            <p>SYD</p>
+          </div>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
           aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
@@ -86,32 +91,7 @@ nav {
     }
   }
 
-  .navbar-collapse {
 
-
-    @media only screen and (max-width: 600px) {
-
-      background: rgba(darken($primary-color, 25), 0.85);
-      backdrop-filter: blur(10px);
-
-      .nav-item {
-        .nav-link {
-
-          font-size: 1rem;
-          font-weight: bold;
-          text-transform: uppercase;
-          padding: 1.05rem;
-
-          &:hover {
-            color: $tertiary-color;
-            text-decoration: none;
-          }
-        }
-
-      }
-
-    }
-  }
 
   .navbar-nav {
     .nav-item {
@@ -146,11 +126,7 @@ nav {
 
 
 
-  .navbar-brand {
-    img {
-      height: 60px;
-    }
-  }
+
 
   a {
     font-weight: bold;
@@ -158,6 +134,50 @@ nav {
 
     &:hover {
       color: $tertiary-color;
+    }
+  }
+
+  .navbar-collapse {
+
+
+    @media only screen and (max-width: 600px) {
+
+      background: rgba(darken($primary-color, 25), 0.85);
+      backdrop-filter: blur(10px);
+
+      .nav-item {
+        .nav-link {
+
+          font-size: 1rem;
+          font-weight: bold;
+          text-transform: uppercase;
+          padding: 1.05rem;
+
+          &:hover {
+            color: $tertiary-color;
+            text-decoration: none;
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .navbar-brand {
+    img {
+      height: 60px;
+
+    }
+  }
+
+  .brand-name {
+    p {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin: 0;
+      padding: 0;
     }
   }
 }
