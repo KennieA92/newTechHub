@@ -7,7 +7,7 @@
                 target="_blank" novalidate>
                 <h2 class="pt-3">Subscribe for News!</h2>
                 <div class="d-flex col-10 justify-content-md-start"><img class="subscription-logo col-2 col-md-1"
-                        src="@/assets/logo.svg" alt="">
+                        src="@/assets/logo.svg" alt="Techhub Logo">
                 </div>
                 <div class="subscription-container col-11 d-flex flex-column align-items-center justify-content-center">
 

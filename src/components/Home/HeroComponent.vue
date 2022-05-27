@@ -15,7 +15,7 @@
           justify-content-sm-center
           flex-md-column
         ">
-        <video src="@/assets/Home/hero-video.mp4" autoplay loop muted playsinline></video>
+        <video src="@/assets/Home/hero-video.mp4" autoplay loop muted playsinline alt="Hero Video"></video>
         <div class="
             hero-info-panel
             col-sm-8 col-md-5 col-lg-3

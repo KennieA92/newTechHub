@@ -1,7 +1,7 @@
 <template>
     <div class="main-container d-flex col-12 col-md-12 justify-content-end">
         <div class="content-container col-12 col-md-10 d-flex flex-row align-items-center">
-            <img class="col-2 col-sm-2 col-md-1" :src="resolve_img_url(imgUrl)" alt="">
+            <img class="col-2 col-sm-2 col-md-1" :src="resolve_img_url(imgUrl)" alt="mission icon">
             <p class="col-6">
                 {{ contentText }}
             </p>
