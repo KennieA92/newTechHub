@@ -7,8 +7,15 @@
       Logout
     </button>
     <div @dragover.prevent @drop.prevent>
-      <label class="form-label" for="customFile">Default file input example</label>
-      <input @change="upload" type="file" class="form-control" id="customFile" />
+      <label class="form-label" for="customFile"
+        >Default file input example</label
+      >
+      <input
+        @change="upload"
+        type="file"
+        class="form-control"
+        id="customFile"
+      />
       <div class="box" @drop="upload"></div>
     </div>
     <TechEventCreate />
@@ -18,8 +25,6 @@
     <TestimonialListComponent />
 
     <GalleryCreateComponent />
-
-
   </div>
 </template>
 
@@ -41,7 +46,7 @@ export default {
     TechEventCreate,
     TechEventList,
     TestimonialCreateComponent,
-    GalleryCreateComponent
+    GalleryCreateComponent,
   },
   setup() {
     const router = useRouter();
@@ -84,8 +89,6 @@ export default {
   color: black;
 
   .box {
-
-
     height: 500px;
     width: 500px;
     background: pink;

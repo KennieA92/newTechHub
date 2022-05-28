@@ -25,13 +25,8 @@ const testimonialCollection = db.collection('testimonials');
 const galleryImageCollection = db.collection('galleryImages');
 
 const storageRef = getStorage(storage);
-console.log(storageRef);
-// const galleryImageCollection = db.collection('galleryImages');
 
-// create an event by using the add prototype from firebase
-// Add a event to the event collection
-
-// Image
+// Adding images to the gallery
 export const uploadImage = async (e) => {
   // Get a reference to the storage service, which is used to create references in your storage bucket
 
@@ -80,11 +75,8 @@ export const useImages = () => {
     }));
   });
   onUnmounted(close);
-  console.log(images);
   return images;
 };
-
-useImages();
 
 export const createTechEvent = (techEvent) => {
   return techEventCollection.add(techEvent);
@@ -156,33 +148,3 @@ export const useLoadTestimonials = () => {
   onUnmounted(close);
   return testimonials;
 };
-
-// // /* Gallery Images Crud */
-// export const createGalleryImage = (galleryImage) => {
-//   return galleryImageCollection.add(galleryImage);
-// };
-
-// export const getGalleryImage = async (id) => {
-//   const galleryImage = await galleryImageCollection.doc(id).get();
-//   return galleryImage.exists ? galleryImage.data() : null;
-// };
-
-// export const updateGalleryImage = (id, galleryImage) => {
-//   return galleryImageCollection.doc(id).update(galleryImage);
-// };
-
-// export const deleteGalleryImage = (id) => {
-//   return galleryImageCollection.doc(id).delete();
-// };
-
-// export const useLoadGalleryImage = () => {
-//   const galleryImages = ref([]);
-//   const close = galleryImageCollection.onSnapshot((snapshot) => {
-//     galleryImages.value = snapshot.docs.map((doc) => ({
-//       id: doc.id,
-//       ...doc.data(),
-//     }));
-//   });
-//   onUnmounted(close);
-//   return galleryImages;
-// };

@@ -19,7 +19,6 @@ export default {
   components: { GalleryComponent },
   setup() {
     const images = useImages();
-    console.log(images._rawValue);
     return { images };
   },
 };

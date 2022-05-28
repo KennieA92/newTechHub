@@ -3,8 +3,8 @@
     <section id="hero-section" class="d-flex min-vh-100 col-md-12">
       <div class="container d-flex align-items-center">
         <div class="row align-items-center">
-          <div id="hero-info" class="col-4 mt-5">
-            <h1 class="text-left">Hello World</h1>
+          <div id="hero-info" class="col-lg-4 col-md-12 mt-5">
+            <h1 class="text-left">Events</h1>
             <p class="text-left">
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea nulla
               doloribus sequi nisi iusto laudantium numquam omnis perspiciatis
@@ -31,12 +31,21 @@ export default {};
     40%,
     $secondary-color 100%
   );
-
+  img {
+    object-fit: cover;
+    object-position: top center;
+  }
   #hero-info {
     text-align: left;
+    // margin-bottom: 100px;
   }
   //   #big-c {
   //     background-color: black;
   //   }
+  @media screen and (max-width: 768px) {
+    img {
+      width: 370px;
+    }
+  }
 }
 </style>

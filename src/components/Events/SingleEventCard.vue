@@ -1,20 +1,19 @@
 <template>
-  <EventModalWindow v-if="showModal" @close="toggleModal" />
+  <EventModalWindow v-if="showModal" @close="toggleModal" :event="event" />
   <div class="col-xl-3">
     <div @click="toggleModal" class="card">
       <div id="date">
         <p class="date-text">19</p>
         <h4 class="date-text">May</h4>
       </div>
-      <img
-        :src="require('@/assets/StartUp/Image3.png')"
-        class="card-img-top"
-        alt="..."
-      />
+      <img :src="event.imgUrl" class="card-img-top" alt="..." />
       <div class="card-body m-2">
-        <p class="card-text kind">Kind of event:</p>
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Location</p>
+        <p class="card-text">{{ event.genre }}</p>
+        <h5 class="card-title">{{ event.name }}</h5>
+        <p class="card-text kind">{{ event.description }}</p>
+        <p class="card-text">
+          {{ event.location.city + " " + event.location.street }}
+        </p>
         <p></p>
       </div>
     </div>
@@ -25,6 +24,7 @@
 import { ref } from "@vue/reactivity";
 import EventModalWindow from "./EventModalWindow.vue";
 export default {
+  props: ["event"],
   components: { EventModalWindow },
   setup() {
     const showModal = ref(false);

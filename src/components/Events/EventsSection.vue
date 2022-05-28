@@ -7,7 +7,12 @@
             <h1 class="text-left my-5">| Our Events:</h1>
           </div>
           <div class="row">
-            <SingleEventCard @click="toggleModal" />
+            <SingleEventCard
+              @click="toggleModal"
+              v-for="event in techEvents"
+              :key="event.id"
+              :event="event"
+            />
           </div>
         </div>
       </div>
@@ -17,9 +22,17 @@
 
 <script>
 import SingleEventCard from "./SingleEventCard.vue";
+import { useLoadTechEvents } from "@/firebase";
+// import { ref } from "@vue/reactivity";
 export default {
   components: {
     SingleEventCard,
+  },
+  setup() {
+    const techEvents = useLoadTechEvents();
+    return {
+      techEvents,
+    };
   },
 };
 </script>
