@@ -1,6 +1,6 @@
 <template>
   <div class="gallery d-flex col-12 justify-content-center">
-    <div class="main-container col-10 d-flex flex-wrap">
+    <div class="main-container col-12 d-flex flex-wrap">
       <GalleryComponent
         @click="toggleModal"
         v-for="image in images"

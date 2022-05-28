@@ -3,14 +3,18 @@
     <!-- using @submit as a click function - add prevent to stop from refreshing page -->
     <form @submit.prevent="onSubmit">
       <div class="form-group">
-
         <label>Name</label>
         <input type="text" v-model="form.name" class="form-control" required />
       </div>
 
       <div class="form-group mt-3">
         <label>Description</label>
-        <input type="text" class="form-control" v-model="form.description" required />
+        <input
+          type="text"
+          class="form-control"
+          v-model="form.description"
+          required
+        />
       </div>
       <div class="form-group mt-3">
         <label>Date</label>
@@ -18,15 +22,30 @@
       </div>
       <div class="form-group mt-3">
         <label>City</label>
-        <input type="text" class="form-control" v-model="form.location.city" required />
+        <input
+          type="text"
+          class="form-control"
+          v-model="form.location.city"
+          required
+        />
       </div>
       <div class="form-group mt-3">
         <label>Street</label>
-        <input type="text" class="form-control" v-model="form.location.street" required />
+        <input
+          type="text"
+          class="form-control"
+          v-model="form.location.street"
+          required
+        />
       </div>
       <div class="form-group mt-3">
         <label>ImgUrl</label>
-        <input type="text" class="form-control" v-model="form.imgUrl" required />
+        <input
+          type="text"
+          class="form-control"
+          v-model="form.imgUrl"
+          required
+        />
       </div>
       <div class="form-group mt-3">
         <label>Genre</label>
@@ -41,35 +60,35 @@
 </template>
 
 <script>
-import { reactive } from 'vue'
-import { createTechEvent } from '@/firebase.js' // maybe this make error
+import { reactive } from "vue";
+import { createTechEvent } from "@/firebase.js"; // maybe this make error
 export default {
   setup() {
     const form = reactive({
-      name: '',
-      description: '',
-      date: '',
+      name: "",
+      description: "",
+      date: "",
       location: {
-        city: '',
-        street: ''
+        city: "",
+        street: "",
       },
-      imgUrl: '',
-      genre: ''
-    })
+      imgUrl: "",
+      genre: "",
+    });
     const onSubmit = async () => {
       // spread operator to add field + invoking our createTechEvent function from firebase.js
-      await createTechEvent({ ...form })
+      await createTechEvent({ ...form });
       // after create - empty input field
-      form.name = ''
-      form.description = ''
-      form.date = ''
-      form.location = ''
-      form.imgUrl = ''
-      form.genre = ''
-    }
-    return { form, onSubmit }
-  }
-}
+      form.name = "";
+      form.description = "";
+      form.date = "";
+      form.location = "";
+      form.imgUrl = "";
+      form.genre = "";
+    };
+    return { form, onSubmit };
+  },
+};
 </script>
 
 <style lang="scss" scoped>

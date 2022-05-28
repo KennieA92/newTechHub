@@ -30,4 +30,10 @@ img {
   object-fit: cover;
   max-height: 30vh;
 }
+
+@media screen and (max-width: 768px) {
+  img {
+    width: 90%;
+  }
+}
 </style>
