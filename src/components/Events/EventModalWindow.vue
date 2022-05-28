@@ -18,7 +18,9 @@
               <h5 class="card-title">
                 <i class="fa-solid fa-location-dot"></i> WHERE
               </h5>
-              <p class="card-text m-3 text-center">{{ event.location }}</p>
+              <p class="card-text m-3 text-center">
+                {{ event.location.city + " " + event.location.street }}
+              </p>
             </div>
           </div>
           <small class="text-muted">@TechHubSyd</small>
