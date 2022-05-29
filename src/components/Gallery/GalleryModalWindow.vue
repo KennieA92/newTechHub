@@ -1,14 +1,14 @@
 <template>
   <div>
     <div class="block container" @click="$emit('close')">
-      <img :src="require('@/assets/StartUp/Image3.png')" alt="Card image cap" />
+      <img :src="require('@/assets/StartUp/Image3.webp')" alt="Card image cap" />
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  setup() {},
+  setup() { },
 };
 </script>
 
