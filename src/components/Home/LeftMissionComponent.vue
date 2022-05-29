@@ -31,7 +31,7 @@ export default {
 .content-container {
     background: $secondary-color;
     margin: 0.5vh 0;
-    height: 15vh;
+    height: 150px;
 
     p {
         position: absolute;
@@ -40,12 +40,9 @@ export default {
     }
 
     img {
-        height: 10vh;
-        padding-right: 2vw;
+        height: 80px;
+        padding-right: 20px;
     }
 
-    @media only screen and (max-width: 600px) {
-        height: 20vh;
-    }
 }
 </style>

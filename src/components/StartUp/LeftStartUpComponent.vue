@@ -21,22 +21,18 @@ export default {
 .content-container {
     background: $secondary-color;
     margin: 0.5vh 0;
-    height: 17vh;
+    height: 150px;
+    font-size: 1.5rem;
 
     p {
         position: absolute;
         left: 25%;
-
-        font-size: 1.5rem;
         margin: 0;
     }
 
     @media only screen and (max-width: 600px) {
-        height: 20vh;
-
-        p {
-            font-size: 16px;
-        }
+        height: 180px;
+        font-size: 1rem;
     }
 }
 </style>

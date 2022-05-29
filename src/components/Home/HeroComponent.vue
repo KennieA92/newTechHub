@@ -50,67 +50,42 @@ export default {
 
   .hero-info {
     text-align: center;
-    margin-bottom: 10vh;
+    margin-bottom: 90px;
+
+  }
+
+
+  video {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(70%);
+  }
+
+  .hero-info-panel {
+    display: flex;
+    z-index: 2;
+    flex-direction: column;
 
     @media only screen and (max-width: 600px) {
-      margin-bottom: 6vh;
-
-      @media only screen and (min-height: 750px) {
-        margin-bottom: 10vh;
-      }
+      width: 80vw;
     }
 
-
-    video {
-      position: absolute;
-      left: 0;
-      top: 0;
-      height: 100vh;
-      width: 100%;
-      object-fit: cover;
-      filter: brightness(70%);
-    }
-
-    .hero-info-panel {
+    .btn-ticket {
+      width: 145px;
+      min-height: 45px;
+      background-color: $tertiary-color;
+      color: $quaternary-color;
+      border-radius: 25px;
       display: flex;
-      z-index: 2;
-      flex-direction: column;
-
-      @media only screen and (max-width: 600px) {
-        width: 80vw;
-      }
-
-      .btn-ticket {
-        width: 145px;
-        min-height: 45px;
-        background-color: $tertiary-color;
-        color: $quaternary-color;
-        border-radius: 25px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        text-decoration: none;
-      }
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+      text-decoration: none;
     }
   }
 }
-
-// @media only screen and (max-width: 550px) {
-//   .hero-section {
-//     margin-bottom: -15vh;
-//     min-height: 40vh !important;
-
-//     .hero-info {
-//       margin-top: 25vh;
-
-//       video {
-//         height: 50vh;
-//         object-fit: scale-down;
-//         object-position: unset;
-
-//       }
-//     }
-//   }
-// }
 </style>

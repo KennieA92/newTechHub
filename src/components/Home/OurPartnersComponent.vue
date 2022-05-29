@@ -9,33 +9,51 @@
                 companies</p>
             <div class="company-container col-10 d-flex flex-wrap justify-content-center align-items-center gap-4">
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo1.png" alt="company-logo-1">
+                    <a href="https://www2.deloitte.com/dk/da/pages/about-deloitte/topics/about-deloitte.html">
+                        <img src="@/assets/Home/company-logo1.png" alt="company-logo-1">
+                    </a>
                 </div>
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo2.png" alt="company-logo-2">
+                    <a href="https://vf.dk/">
+                        <img src="@/assets/Home/company-logo2.png" alt="company-logo-2">
+                    </a>
                 </div>
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo3.png" alt="company-logo-3">
+                    <a href="https://www.businessesbjerg.com/da/">
+                        <img src="@/assets/Home/company-logo3.png" alt="company-logo-3">
+                    </a>
                 </div>
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/08/AAU_CIRCLE_ESB_blue_rgb.png?w=283&ssl=1"
-                        alt="company-logo-5">
+                    <a
+                        href="https://www.esbjerg.aau.dk/Uddannelser/?gclid=CjwKCAjwkMeUBhBuEiwA4hpqEAtlqKYvs4g8NOJGhrqOCA6s_iQZjUP-C_Pu220fVjLs3PIE3nLL3hoCg3MQAvD_BwE">
+                        <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/08/AAU_CIRCLE_ESB_blue_rgb.png?w=283&ssl=1"
+                            alt="company-logo-5">
+                    </a>
                 </div>
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/04/A.-Thomsen-holding-aps-1.png?w=500&ssl=1"
-                        alt="company-logo-7">
+                    <a href="https://www.proff.dk/firma/a.-thomsen-holding-aps/esbjerg-v/holdingselskaper/GM2N4FI06Y4/">
+                        <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/04/A.-Thomsen-holding-aps-1.png?w=500&ssl=1"
+                            alt="company-logo-7">
+                    </a>
                 </div>
 
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/11/E.-Bank-Lauridsen-Holding-A_S.png?w=500&ssl=1"
-                        alt="company-logo-8">
+                    <a href="https://www.ebanklauridsen.dk/">
+                        <img src="https://i0.wp.com/techhubsyd.dk/wp-content/uploads/2019/11/E.-Bank-Lauridsen-Holding-A_S.png?w=500&ssl=1"
+                            alt="company-logo-8">
+                    </a>
                 </div>
 
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo6.png" alt="company-logo-6">
+                    <a
+                        href="https://www.easv.dk/da/?utm_source=google&utm_medium=cpc&utm_campaign=ca6459&utm_content=generel&gclid=CjwKCAjwkMeUBhBuEiwA4hpqEP7DX8wea5ThvgTz_GAB6HSYPMaqiegyjSEZ88SZ9yNNA7vUrqvEhRoCNSUQAvD_BwE">
+                        <img src="@/assets/Home/company-logo6.png" alt="company-logo-6">
+                    </a>
                 </div>
                 <div class="company-logo col-6 col-sm-3">
-                    <img src="@/assets/Home/company-logo4.png" alt="company-logo-4">
+                    <a href="https://innovationsfonden.dk/da">
+                        <img src="@/assets/Home/company-logo4.png" alt="company-logo-4">
+                    </a>
                 </div>
             </div>
         </div>
