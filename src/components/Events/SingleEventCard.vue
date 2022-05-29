@@ -1,6 +1,6 @@
 <template>
   <EventModalWindow v-if="showModal" @close="toggleModal" :event="event" />
-  <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6">
+  <div class="col-12 col-sm-6 col-md-3 my-1">
     <div @click="toggleModal" class="card">
       <div id="date">
         <p class="date-text">19</p>

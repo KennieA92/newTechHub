@@ -44,7 +44,7 @@ export default {};
   //   }
   @media screen and (max-width: 768px) {
     img {
-      width: 370px;
+      width: 350px;
     }
   }
 }
