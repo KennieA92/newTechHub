@@ -11,16 +11,16 @@
                     <p class="align-self-start pt-4">For Startups</p>
                     <div class="d-flex align-self-center justify-content-between col-12 flex-wrap">
                         <div class="d-flex col-6 align-items-center my-2">
-                            <input type="radio" id="Saas" name="startup" value="SaaS" required>
-                            <label class="px-2" for="Saas">SaaS</label>
+                            <input type="radio" id="AI/AR/VR" name="startup" value="AI/AR/VR" default required>
+                            <label class="px-2" for="AI/AR/VR">AI/AR/VR</label>
                         </div>
                         <div class="d-flex col-6 align-items-center my-2">
                             <input type="radio" id="Mobile" name="startup" value="Mobile" required>
                             <label class="px-2" for="Mobile">Mobile App</label>
                         </div>
                         <div class="d-flex col-6 align-items-center my-2">
-                            <input type="radio" id="AI/AR/VR" name="startup" value="AI/AR/VR" required>
-                            <label class="px-2" for="AI/AR/VR">AI/AR/VR</label>
+                            <input type="radio" id="Saas" name="startup" value="SaaS" required>
+                            <label class="px-2" for="Saas">SaaS</label>
                         </div>
                         <div class="d-flex col-6 align-items-center my-2">
                             <input type="radio" id="Other" name="startup" value="Other" required>
