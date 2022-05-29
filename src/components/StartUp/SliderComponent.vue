@@ -9,21 +9,21 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active" data-bs-interval="10000">
-                    <img :src="require('@/assets/StartUp/Image1.png')" class="d-block w-100" alt="Slider Image 1">
+                    <img :src="require('@/assets/StartUp/Image1.webp')" class="d-block w-100" alt="Slider Image 1">
                     <div class="carousel-caption d-block">
                         <h1>TechHub Reboot Event</h1>
                         <p>Tech&Tequila Event hosted at Esbjerg Streetfood by Kasper, Ronni & Trine. </p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <img :src="require('@/assets/StartUp/Image2.png')" class="d-block w-100" alt="Slider Image 2">
+                    <img :src="require('@/assets/StartUp/Image2.webp')" class="d-block w-100" alt="Slider Image 2">
                     <div class="carousel-caption d-block">
                         <h1>Networking Event</h1>
                         <p>People networking at Esbjerg Streetfood, during the Tech & Tequila event. </p>
                     </div>
                 </div>
                 <div class="carousel-item" data-bs-interval="10000">
-                    <img :src="require('@/assets/StartUp/Image3.png')" class="d-block w-100" alt="Slider Image 3">
+                    <img :src="require('@/assets/StartUp/Image3.webp')" class="d-block w-100" alt="Slider Image 3">
                     <div class="carousel-caption d-block">
                         <h1>Engaging Presentation</h1>
                         <p>People listening intently to the presentation done by Ronni. </p>

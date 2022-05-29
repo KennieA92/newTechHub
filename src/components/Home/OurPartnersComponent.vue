@@ -16,7 +16,7 @@
                 </div>
                 <div class="company-logo col-12 col-sm-3 p-5">
                     <a class="py-5" href="https://vf.dk/">
-                        <img src="@/assets/Home/company-logo2.png" alt="company-logo-2">
+                        <img src="@/assets/Home/company-logo2.webp" alt="company-logo-2">
                     </a>
                 </div>
                 <div class="company-logo col-12 col-sm-3 p-5">
