@@ -1,6 +1,6 @@
 <template>
   <GalleryModalWindow v-if="showModal" @close="toggleModal" :image="image" />
-  <div class="col-md-4 col-12 p-1">
+  <div class="col-md-3 col-12 p-1">
     <div @click="toggleModal" class="">
       <img :src="image.url" alt="" />
     </div>
@@ -28,8 +28,9 @@ export default {
 <style lang="scss" scoped>
 img {
   object-fit: cover;
-  max-height: 30vh;
   width: 100%;
+  height: 300px;
+  max-height: 30vh;
 }
 
 @media screen and (max-width: 768px) {

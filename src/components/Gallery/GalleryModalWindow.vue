@@ -2,6 +2,7 @@
   <div>
     <div class="block container" @click="$emit('close')">
       <img :src="image.url" alt="Card image cap" />
+      <i class="fa-solid fa-xmark"></i>
     </div>
   </div>
 </template>
@@ -16,7 +17,7 @@ export default {
 <style lang="scss" scoped>
 .block {
   position: fixed;
-  z-index: 9999;
+  z-index: 9998;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
