@@ -35,18 +35,17 @@ export default {
 .content-container {
     background: $secondary-color;
     margin: 0.5vh 0;
-    min-height: 25vh;
-
+    min-height: 240px;
 
     .text-container {
         position: absolute;
-        right: 25vw;
+        right: 25%;
 
     }
 
-
     img {
-        height: 10vh;
+        height: 120px;
+        padding: 20px;
     }
 
     @media only screen and (max-width: 600px) {
@@ -60,13 +59,12 @@ export default {
             position: static;
 
             h2 {
-                margin-bottom: 2vh;
+                margin-bottom: 20px;
             }
         }
 
         img {
-            height: 14vh;
-            margin: 5vh 0;
+            height: 100px;
         }
     }
 

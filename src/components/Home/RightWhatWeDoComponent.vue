@@ -35,17 +35,17 @@ export default {
 .content-container {
     background: $primary-color;
     margin: 0.5vh 0;
-    min-height: 25vh;
-
+    min-height: 240px;
 
     .text-container {
         position: absolute;
-        left: 25vw;
+        left: 25%;
 
     }
 
     img {
-        height: 10vh;
+        height: 120px;
+        padding: 20px;
     }
 
     @media only screen and (max-width: 600px) {
@@ -54,19 +54,17 @@ export default {
         flex-wrap: wrap;
         flex-direction: column !important;
         justify-content: center;
-        align-items: center;
 
         .text-container {
             position: static;
 
             h2 {
-                margin-bottom: 2vh;
+                margin-bottom: 20px;
             }
         }
 
         img {
-            height: 14vh;
-            margin: 5vh 0;
+            height: 100px;
         }
     }
 }
