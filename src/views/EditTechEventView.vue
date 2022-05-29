@@ -9,57 +9,50 @@
 
       <div class="form-group mt-3">
         <label>Task</label>
-        <input
-          v-model="form.task"
-          class="form-control"
-          type="text"
-          required
-        />
+        <input v-model="form.task" class="form-control" type="text" required />
       </div>
 
-      <button type="submit" class="btn btn-primary  mt-3">
-        Update
-      </button>
+      <button type="submit" class="btn btn-primary mt-3">Update</button>
     </form>
   </div>
 </template>
 
 <script>
-import { reactive, computed, onMounted } from 'vue'
-import { useRoute, useRouter } from 'vue-router'
-import { getTechEvent, updateTechEvent } from '@/firebase.js'
+import { reactive, computed, onMounted } from "vue";
+import { useRoute, useRouter } from "vue-router";
+import { getTechEvent, updateTechEvent } from "@/firebase.js";
 export default {
   setup() {
-    const router = useRouter()
-    // grab the user ID from the URL by calling the useRoute hook + using the computed 
+    const router = useRouter();
+    // grab the user ID from the URL by calling the useRoute hook + using the computed
     // to store the route.param.id
-    const route = useRoute()
-    // Sometimes we need state that depends on other state - in Vue this is 
+    const route = useRoute();
+    // Sometimes we need state that depends on other state - in Vue this is
     // handled with component computed properties.
-    const techEventId = computed(() => route.params.id)
+    const techEventId = computed(() => route.params.id);
     const form = reactive({
-      name: '',
-      task: ''
-    })
+      name: "",
+      task: "",
+    });
     // show information about the current(click) project in the edit form
-    // add an onMounted life-hook that will get the user, based on router id 
+    // add an onMounted life-hook that will get the user, based on router id
     // pull the project from firebase and then assign the values to the fields
     onMounted(async () => {
-      const techEvent = await getTechEvent(techEventId.value)
-      form.name = techEvent.name
-      form.task = techEvent.task
-    })
+      const techEvent = await getTechEvent(techEventId.value);
+      form.name = techEvent.name;
+      form.task = techEvent.task;
+    });
     const update = async () => {
       // once user clicks submit, redirect them to home page or '/'
-      await updateTechEvent(techEventId.value, {...form})
-      router.push('/admin')
+      await updateTechEvent(techEventId.value, { ...form });
+      router.push("/admin");
       // after create - empty input field
-      form.name = ''
-      form.task = ''
-    }
-    return { form, update }
-  }
-}
+      form.name = "";
+      form.task = "";
+    };
+    return { form, update };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
