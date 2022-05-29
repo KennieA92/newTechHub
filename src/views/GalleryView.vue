@@ -1,12 +1,22 @@
 <template>
-  <div class="gallery d-flex col-12 justify-content-center">
-    <div class="main-container col-12 d-flex flex-wrap">
-      <GalleryComponent
-        @click="toggleModal"
-        v-for="image in images"
-        :key="image.id"
-        :image="image"
-      />
+  <div class="gallery">
+    <div class="row">
+      <div class="col-12 py-5 container">
+        <h1>Gallery</h1>
+        <p>Some of the pictures of ours past events :</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="d-flex col-12 justify-content-center">
+        <div class="main-container col-12 d-flex flex-wrap">
+          <GalleryComponent
+            @click="toggleModal"
+            v-for="image in images"
+            :key="image.id"
+            :image="image"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -19,6 +29,7 @@ export default {
   components: { GalleryComponent },
   setup() {
     const images = useImages();
+
     return { images };
   },
 };
