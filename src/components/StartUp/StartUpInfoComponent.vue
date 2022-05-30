@@ -1,19 +1,17 @@
 <template>
   <section id="startup-info-section">
-    <div
-      class="
+    <div class="
         main-container
         d-flex
         flex-column
         col-12
         justify-content-center
         align-items-center
-      "
-    >
+      ">
       <h1 class="col-10 col-sm-12">
         Are you a <span>Tech Startup</span> looking for <span>Funding?</span>
       </h1>
-      <p class="col-6 col-sm-4 pt-5">
+      <p class="col-6 col-sm-4">
         Then this is your chance to meet Tech-Focused investors looking for the
         most pomising <span>Tech Startups</span> in the region.
       </p>
@@ -44,7 +42,7 @@ export default {};
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 10px;
     text-decoration: none;
   }
 }

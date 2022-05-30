@@ -138,7 +138,7 @@ nav {
   .navbar-collapse {
 
 
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 990px) {
       background: rgba(darken($primary-color, 25), 0.85);
       backdrop-filter: blur(10px);
 
