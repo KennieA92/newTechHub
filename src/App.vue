@@ -1,19 +1,20 @@
 <template>
   <NavigationComponent />
   <router-view />
+  <FooterComponent />
 </template>
 
 <script>
 import "firebase/compat/auth";
-import { } from "@/firebase.js"; // all from firebase.js file
+import {} from "@/firebase.js"; // all from firebase.js file
 import NavigationComponent from "@/components/NavigationComponent.vue";
+import FooterComponent from "@/components/FooterComponent.vue";
 export default {
   components: {
     NavigationComponent,
+    FooterComponent,
   },
-  setup() {
-
-  },
+  setup() {},
 };
 </script>
 
@@ -32,10 +33,10 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Quantico', "Aqua Grotesque", Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Quantico", "Aqua Grotesque", Avenir, Helvetica, Arial,
+    sans-serif;
   font-display: swap;
 }
-
 
 #app {
   -webkit-font-smoothing: antialiased;
