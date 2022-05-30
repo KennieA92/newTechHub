@@ -38,6 +38,7 @@ export default {
 <style lang="scss" scoped>
 .gallery {
   margin-top: 80px;
+  height: 100vh;
   background: linear-gradient(
     to bottom,
     $tertiary-color,
