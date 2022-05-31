@@ -173,7 +173,7 @@ nav {
 
     p {
       font-size: 1.2rem;
-      font-weight: bold;
+      font-weight: medium;
       text-transform: uppercase;
       margin: 0;
       padding: 0;
