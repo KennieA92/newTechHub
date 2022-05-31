@@ -8,6 +8,10 @@
                 <h2 class="pt-3">Subscribe for News!</h2>
                 <div class="d-flex col-10 justify-content-md-start"><img class="subscription-logo col-2 col-md-1"
                         src="@/assets/logo.svg" alt="Techhub Logo">
+                    <div class="brand-name d-flex flex-column align-items-center justify-content-center">
+                        <p>TECHHUB</p>
+                        <p class="align-self-start">SYD</p>
+                    </div>
                 </div>
                 <div class="subscription-container col-11 d-flex flex-column align-items-center justify-content-center">
 
@@ -46,6 +50,18 @@ export default {
         padding: 0;
         background: linear-gradient(to bottom right, $primary-color 0%, $primary-color 50%, $secondary-color 50%, $secondary-color 100%);
         padding-bottom: 6vh;
+
+        .brand-name {
+            padding-left: 0.5rem;
+
+            p {
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+            }
+        }
 
         .subscription-logo {
             margin-bottom: 1.2vw;
