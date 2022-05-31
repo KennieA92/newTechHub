@@ -37,13 +37,13 @@ export const uploadImage = async (e) => {
 
   const storageUpload = firebase.storage().ref();
   const fileRef = storageUpload.child(file.name);
-  const task = fileRef.put(file);
   await fileRef.put(file);
+  const task = fileRef.put(file);
 
   task.on(
     'state_changed',
     (snapshot) => {
-      console.log(snapshot);
+      console.log(snapshot.bytesTransferred);
     },
     (error) => {
       console.log(error);
@@ -66,7 +66,7 @@ export const uploadImage = async (e) => {
   );
 };
 
-export const useImages = () => {
+export const getImages = () => {
   const images = ref([]);
   const close = galleryImageCollection.onSnapshot((snapshot) => {
     images.value = snapshot.docs.map((doc) => ({

@@ -23,12 +23,12 @@
 
 <script>
 import GalleryComponent from "@/components/Gallery/GalleryComponent.vue";
-import { useImages } from "@/firebase.js";
+import { getImages } from "@/firebase.js";
 
 export default {
   components: { GalleryComponent },
   setup() {
-    const images = useImages();
+    const images = getImages();
 
     return { images };
   },

@@ -44,7 +44,7 @@
         <div class="d-flex col-12 justify-content-center">
           <input
             type="submit"
-            value="Subscribe"
+            value="SUBSCRIBE"
             name="subscribe"
             class="button"
           />
