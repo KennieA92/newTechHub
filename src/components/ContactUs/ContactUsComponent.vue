@@ -70,9 +70,10 @@ export default {};
       text-align: center;
       background: rgba($quaternary-color, 0.8);
 
+      border: none;
+
       &:focus {
         outline: 3px solid $tertiary-color;
-        border: none;
       }
     }
 
@@ -96,6 +97,15 @@ export default {};
       justify-content: center;
       align-items: center;
       margin-top: 20px;
+
+      &:focus {
+        transform: scale(1.05);
+      }
+
+      &:hover {
+        background-color: $primary-color;
+        text-decoration: none;
+      }
     }
 
     .content-container {

@@ -8,6 +8,10 @@
                 <h2 class="pt-3">Subscribe for News!</h2>
                 <div class="d-flex col-10 justify-content-md-start"><img class="subscription-logo col-2 col-md-1"
                         src="@/assets/logo.svg" alt="Techhub Logo">
+                    <div class="brand-name d-flex flex-column align-items-center justify-content-center">
+                        <p>TECHHUB</p>
+                        <p class="align-self-start">SYD</p>
+                    </div>
                 </div>
                 <div class="subscription-container col-11 d-flex flex-column align-items-center justify-content-center">
 
@@ -47,6 +51,18 @@ export default {
         background: linear-gradient(to bottom right, $primary-color 0%, $primary-color 50%, $secondary-color 50%, $secondary-color 100%);
         padding-bottom: 6vh;
 
+        .brand-name {
+            padding-left: 0.5rem;
+
+            p {
+                font-size: 1.2rem;
+                font-weight: bold;
+                text-transform: uppercase;
+                margin: 0;
+                padding: 0;
+            }
+        }
+
         .subscription-logo {
             margin-bottom: 1.2vw;
             height: 100%;
@@ -65,6 +81,7 @@ export default {
 
                 text-align: center;
                 background: rgba($quaternary-color, 0.8);
+                border: none;
 
                 &:focus {
                     outline: 3px solid $tertiary-color;
@@ -124,19 +141,15 @@ export default {
             justify-content: center;
             align-items: center;
             margin-top: 20px;
-        }
 
-        .button:active,
-        .button:focus,
-        .button:hover {
-            background-color: #005580;
-            border-color: #005580;
-            color: #ffffff;
-            text-decoration: none;
-        }
+            &:focus {
+                transform: scale(1.05);
+            }
 
-        .button:active {
-            box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+            &:hover {
+                background-color: $primary-color;
+                text-decoration: none;
+            }
         }
     }
 }

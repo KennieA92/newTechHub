@@ -172,7 +172,6 @@ nav {
     padding-left: 0.5rem;
 
     p {
-      font-family: 'Quantico';
       font-size: 1.2rem;
       font-weight: bold;
       text-transform: uppercase;
