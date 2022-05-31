@@ -81,6 +81,7 @@ export default {
 
                 text-align: center;
                 background: rgba($quaternary-color, 0.8);
+                border: none;
 
                 &:focus {
                     outline: 3px solid $tertiary-color;
@@ -140,19 +141,15 @@ export default {
             justify-content: center;
             align-items: center;
             margin-top: 20px;
-        }
 
-        .button:active,
-        .button:focus,
-        .button:hover {
-            background-color: #005580;
-            border-color: #005580;
-            color: #ffffff;
-            text-decoration: none;
-        }
+            &:focus {
+                transform: scale(1.05);
+            }
 
-        .button:active {
-            box-shadow: inset 0 0.15625em 0.25em rgba(0, 0, 0, 0.15), 0 1px 0.15625em rgba(0, 0, 0, 0.05);
+            &:hover {
+                background-color: $primary-color;
+                text-decoration: none;
+            }
         }
     }
 }

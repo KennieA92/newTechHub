@@ -68,6 +68,15 @@ export default {
             justify-content: center;
             align-items: center;
             margin-top: 20px;
+
+            &:focus {
+                transform: scale(1.05);
+            }
+
+            &:hover {
+                background-color: $primary-color;
+                text-decoration: none;
+            }
         }
 
         .content-container {

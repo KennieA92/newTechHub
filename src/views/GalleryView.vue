@@ -9,12 +9,7 @@
     <div class="row">
       <div class="d-flex col-12 justify-content-center">
         <div class="main-container col-12 d-flex flex-wrap">
-          <GalleryComponent
-            @click="toggleModal"
-            v-for="image in images"
-            :key="image.id"
-            :image="image"
-          />
+          <GalleryComponent @click="toggleModal" v-for="image in images" :key="image.id" :image="image" />
         </div>
       </div>
     </div>
@@ -37,14 +32,13 @@ export default {
 
 <style lang="scss" scoped>
 .gallery {
+  overflow-x: hidden;
   margin-top: 80px;
   height: 100vh;
-  background: linear-gradient(
-    to bottom,
-    $tertiary-color,
-    10%,
-    $secondary-color 90%
-  );
+  background: linear-gradient(to bottom,
+      $tertiary-color,
+      10%,
+      $secondary-color 90%);
 
   .main-container {
     padding: 20px;

@@ -44,6 +44,15 @@ export default {};
     align-items: center;
     margin-top: 10px;
     text-decoration: none;
+
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      text-decoration: none;
+    }
   }
 }
 
