@@ -32,7 +32,7 @@
           <input type="number" placeholder="yyyy" v-model="form.date.year" />
         </div>
         <label>Time :</label>
-        <input type="text" placeholder="12:12" />
+        <input type="text" placeholder="12:12" v-model="form.date.time" />
       </div>
 
       <div class="form-group mt-3">
@@ -86,6 +86,7 @@ export default {
         day: "",
         month: "",
         year: "",
+        time: "",
       },
       location: {
         city: "",

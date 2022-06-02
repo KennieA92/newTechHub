@@ -50,7 +50,7 @@ export default {
     margin: 5px 0;
   }
   #date {
-    width: 90px;
+    width: 130px;
     height: 90px;
     position: absolute;
     margin: 20px;
