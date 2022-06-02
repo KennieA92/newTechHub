@@ -18,8 +18,15 @@
       </div>
       <div class="form-group mt-3">
         <label>Date</label>
-        <input type="date" class="form-control" v-model="form.date" required />
+        <div class="FormDate">
+          <input type="number" v-model="form.date.day" placeholder="dd" />
+          <span class="FormDate__divider">/</span>
+          <input type="number" placeholder="mm" v-model="form.date.month" />
+          <span class="FormDate__divider">/</span>
+          <input type="number" placeholder="yyyy" v-model="form.date.year" />
+        </div>
       </div>
+
       <div class="form-group mt-3">
         <label>City</label>
         <input
@@ -64,10 +71,14 @@ import { reactive } from "vue";
 import { createTechEvent } from "@/firebase.js"; // maybe this make error
 export default {
   setup() {
-    const form = reactive({
+    let form = reactive({
       name: "",
       description: "",
-      date: "",
+      date: {
+        day: "",
+        month: "",
+        year: "",
+      },
       location: {
         city: "",
         street: "",
@@ -75,6 +86,9 @@ export default {
       imgUrl: "",
       genre: "",
     });
+
+    // Seperate date
+
     const onSubmit = async () => {
       // spread operator to add field + invoking our createTechEvent function from firebase.js
       await createTechEvent({ ...form });

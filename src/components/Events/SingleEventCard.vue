@@ -3,7 +3,7 @@
   <div class="col-12 col-sm-6 col-md-3 my-1">
     <div @click="toggleModal" class="card">
       <div id="date">
-        <p class="date-text">19</p>
+        <p class="date-text">{{ event.date.day }}</p>
         <h4 class="date-text">May</h4>
       </div>
       <img :src="event.imgUrl" class="card-img-top" alt="..." />
