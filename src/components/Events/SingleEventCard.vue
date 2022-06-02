@@ -64,4 +64,8 @@ export default {
     }
   }
 }
+img {
+  height: 200px;
+  object-fit: cover;
+}
 </style>
