@@ -4,13 +4,15 @@
     <div @click="toggleModal" class="card">
       <div id="date">
         <p class="date-text">{{ event.date.day }}</p>
-        <h4 class="date-text">May</h4>
+        <h4 class="date-text">{{ event.date.month }}</h4>
       </div>
       <img :src="event.imgUrl" class="card-img-top" alt="..." />
       <div class="card-body m-2">
         <p class="card-text">{{ event.genre }}</p>
         <h5 class="card-title">{{ event.name }}</h5>
-        <p class="card-text kind">{{ event.description }}</p>
+        <p class="card-text kind">
+          {{ event.description.substring(0, 20) }}...
+        </p>
         <p class="card-text">
           {{ event.location.city + " " + event.location.street }}
         </p>

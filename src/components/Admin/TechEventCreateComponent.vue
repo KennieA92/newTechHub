@@ -17,14 +17,22 @@
         />
       </div>
       <div class="form-group mt-3">
-        <label>Date</label>
+        <label>Date & Time</label>
         <div class="FormDate">
+          <label>Date :</label>
+
           <input type="number" v-model="form.date.day" placeholder="dd" />
-          <span class="FormDate__divider">/</span>
-          <input type="number" placeholder="mm" v-model="form.date.month" />
-          <span class="FormDate__divider">/</span>
+          <span>/</span>
+          <input
+            type="string"
+            placeholder="With words"
+            v-model="form.date.month"
+          />
+          <span>/</span>
           <input type="number" placeholder="yyyy" v-model="form.date.year" />
         </div>
+        <label>Time :</label>
+        <input type="text" placeholder="12:12" />
       </div>
 
       <div class="form-group mt-3">
