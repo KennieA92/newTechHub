@@ -39,7 +39,7 @@
         <div class="col-12">
           <p class="copyright-text">
             Copyright &copy; 2022 All Rights Reserved by
-            <a href="#">TechHubSyd</a>.
+            <a href="#">TechhubSyd</a>.
           </p>
         </div>
 
