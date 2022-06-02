@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-sm-12 col-md-6">
-          <h6>About</h6>
+          <p>About</p>
           <p class="text-justify">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat,
             maiores atque. Commodi repellendus nisi aliquid similique quaerat
@@ -15,7 +15,7 @@
         <div class="col-xs-6 col-md-3"></div>
 
         <div class="col-xs-6 col-md-3">
-          <h6>Quick Links</h6>
+          <p>Quick Links</p>
           <ul class="footer-links">
             <li>
               <router-link to="/techStartUp">Start Ups</router-link>
@@ -80,7 +80,6 @@ export default {};
     color: $quaternary-color;
     font-size: 1.3rem;
     font-weight: bold;
-
   }
 
   .site-footer hr {
@@ -93,7 +92,7 @@ export default {};
   }
 }
 
-.site-footer h6 {
+.site-footer p {
   color: $quaternary-color;
   font-size: 16px;
   text-transform: uppercase;
@@ -112,7 +111,6 @@ export default {};
 
 .footer-links a {
   color: $quaternary-color;
-
 }
 
 .footer-links a:active,
