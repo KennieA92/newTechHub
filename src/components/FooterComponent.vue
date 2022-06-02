@@ -95,7 +95,6 @@ export default {};
 .site-footer p {
   color: $quaternary-color;
   font-size: 16px;
-  text-transform: uppercase;
   margin-top: 5px;
 }
 
