@@ -2,11 +2,9 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/firestore';
 import 'firebase/compat/storage';
 import {
-  ref as firebaseRef,
-  getStorage,
   getDownloadURL,
 } from 'firebase/storage';
-import { collection, addDoc, storage } from 'firebase/firestore';
+import { collection, addDoc } from 'firebase/firestore';
 import { ref, onUnmounted } from 'vue';
 
 const config = {
@@ -24,36 +22,34 @@ const techEventCollection = db.collection('techEvents'); // grab the collection 
 const testimonialCollection = db.collection('testimonials');
 const galleryImageCollection = db.collection('galleryImages');
 
-const storageRef = getStorage(storage);
 
 // Adding images to the gallery
 export const uploadImage = async (e) => {
   // Get a reference to the storage service, which is used to create references in your storage bucket
 
   // Create a storage reference from our storage service
-  const imagesRef = firebaseRef(storageRef, 'gallery');
-  console.log(imagesRef);
   const file = e.dataTransfer.files[0];
 
-  const storageUpload = firebase.storage().ref();
-  const fileRef = storageUpload.child(file.name);
-  await fileRef.put(file);
+  const storageUpload = firebase.storage().ref(); // Bucket Root returned.
+  const fileRef = storageUpload.child(file.name); // The Path to this file in the bucket
+  await fileRef.put(file); // Upload the file to this path in the bucket
   const task = fileRef.put(file);
 
   task.on(
     'state_changed',
     (snapshot) => {
-      console.log(snapshot.bytesTransferred);
+      console.log(snapshot.bytesTransferred); // Observe state change events such as progress, pause, and resume
+      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
     },
     (error) => {
       console.log(error);
       /* error */
     },
     () => {
-      console.log('Success');
-      getDownloadURL(fileRef)
-        .then((url) => {
-          addDoc(collection(db, 'galleryImages/'), {
+      console.log('Success'); // Successfully uploaded
+      getDownloadURL(fileRef) // Get the download URL for the fileRef from the storage bucket
+        .then((url) => { // Add the image(file) to the galleryImages database.
+          addDoc(collection(db, 'galleryImages/'), { // Assign the image to the galleryImages collection and give it an id automatically.
             img: file.name,
             url: url,
           });

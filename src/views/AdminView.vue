@@ -1,26 +1,29 @@
 <template>
   <div class="admin">
-    <h1>This is an admin page</h1>
-    <h1>Welcome {{ name }}</h1>
-    <button @click="logout">
-      <!-- v-if="user"  -->
-      Logout
-    </button>
-    <div @dragover.prevent @drop.prevent>
-      <label class="form-label" for="customFile"
-        >Default file input example</label
-      >
-      <input
-        @change="upload"
-        type="file"
-        class="form-control"
-        id="customFile"
-      />
-      <div class="box" @drop="upload"></div>
+    <div class="admin-box min-vh-100 d-flex justify-content-center align-items-center flex-wrap">
+      <div class="admin-info-box">
+        <h1 class=" col-12">This is an admin page</h1>
+        <h2 class=" col-12">Use this page to create data to populate the website.</h2>
+        <button class="btn-logout col-12" @click="logout"> Logout
+        </button>
+      </div>
     </div>
+    <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
+      contentText="Create Gallery Images by selecting a File or by Dragging and Dropping one unto the box." />
+    <div class="gallery-create d-flex col-12 justify-content-center">
+      <div @dragover.prevent @drop.prevent class="d-flex flex-wrap justify-content-center col-8">
+        <label class="form-label " for="customFile">
+          <h3>Default file input example</h3>
+        </label>
+        <input @change="upload" type="file" class="form-control" id="customFile" />
+        <div class="d-flex box justify-content-center align-items-center col-12" @drop="upload"> Drag to Upload</div>
+      </div>
+    </div>
+    <RightStartUpComponent class="right-box" data-aos="fade-left" data-aos-duration="1000"
+      contentText="Create Events by filling out the form below." />
     <TechEventCreate />
-    <TechEventList />
-
+    <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
+      contentText="Create Testimonials by filling out the form below" />
     <TestimonialCreateComponent />
     <TestimonialListComponent />
   </div>
@@ -33,16 +36,22 @@ import firebase from "firebase/compat/app";
 import { ref, onBeforeMount } from "vue";
 import { /*useRoute,*/ useRouter } from "vue-router";
 
+import LeftStartUpComponent from "@/components/StartUp/LeftStartUpComponent.vue";
+import RightStartUpComponent from "@/components/StartUp/RightStartUpComponent.vue";
 import TechEventCreate from "@/components/Admin/TechEventCreateComponent.vue";
-import TechEventList from "@/components/Admin/TechEventListComponent.vue";
 import { uploadImage } from "@/firebase.js";
 import TestimonialCreateComponent from "@/components/Admin/TestimonialCreateComponent.vue";
+
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
 export default {
   name: "HomeView",
   components: {
     TechEventCreate,
-    TechEventList,
     TestimonialCreateComponent,
+    LeftStartUpComponent,
+    RightStartUpComponent
   },
   setup() {
     const router = useRouter();
@@ -74,6 +83,9 @@ export default {
           // An error happened.
         });
     };
+
+    AOS.init();
+
     return { name, logout, upload };
   },
 };
@@ -81,13 +93,66 @@ export default {
 
 <style lang='scss'>
 .admin {
-  padding-top: 80px;
-  color: black;
+  overflow-x: hidden;
+  background: linear-gradient(to bottom,
+      $primary-color,
+      40%,
+      $secondary-color 100%);
 
-  .box {
-    height: 500px;
-    width: 500px;
-    background: pink;
+
+  p {
+    color: $quaternary-color;
+  }
+
+  .btn-logout {
+    width: 145px;
+    min-height: 45px;
+    background-color: red;
+    color: $quaternary-color;
+    border: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    text-decoration: none;
+
+    &:focus {
+      transform: scale(1.05);
+    }
+
+    &:hover {
+      background-color: $primary-color;
+      text-decoration: none;
+    }
+  }
+
+  .content-container {
+    margin-top: 10vh;
+    border: 5px solid $quaternary-color;
+  }
+
+  .gallery-create {
+    margin: 5vh 0;
+
+    .form-control {
+      background: $tertiary-color;
+      border-radius: 0;
+      color: white;
+      border: 2px solid $tertiary-color;
+    }
+
+    .box {
+      min-height: 500px;
+      border-radius: 0;
+
+      border: 2px solid $tertiary-color;
+      color: $quaternary-color;
+      background: $secondary-color;
+    }
+
+    @media only screen and (max-width: 600px) {
+      .box {
+        display: none !important;
+      }
+    }
   }
 }
 </style>

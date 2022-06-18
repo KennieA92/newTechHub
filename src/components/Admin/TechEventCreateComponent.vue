@@ -9,58 +9,38 @@
 
       <div class="form-group mt-3">
         <label>Description</label>
-        <input
-          type="text"
-          class="form-control"
-          v-model="form.description"
-          required
-        />
+        <input type="text" class="form-control" v-model="form.description" required />
       </div>
       <div class="form-group mt-3">
-        <label>Date & Time</label>
-        <div class="FormDate">
-          <label>Date :</label>
-
-          <input type="number" v-model="form.date.day" placeholder="dd" />
-          <span>/</span>
-          <input
-            type="string"
-            placeholder="With words"
-            v-model="form.date.month"
-          />
-          <span>/</span>
-          <input type="number" placeholder="yyyy" v-model="form.date.year" />
-        </div>
-        <label>Time :</label>
-        <input type="text" placeholder="12:12" v-model="form.date.time" />
+        <label>Date: 1-31</label>
+        <input class="form-control" type="number" v-model="form.date.day" />
       </div>
+
+      <div class="form-group mt-3">
+        <label>Month: ex. (May) </label>
+        <input class="form-control" type="string" v-model="form.date.month" />
+      </div>
+      <div class="form-group mt-3">
+        <label>Year: yyyy</label>
+        <input class="form-control" type="number" v-model="form.date.year" />
+      </div>
+      <div class="form-group mt-3">
+        <label>Time: hh:mm</label>
+        <input class="form-control" type="text" v-model="form.date.time" />
+      </div>
+
 
       <div class="form-group mt-3">
         <label>City</label>
-        <input
-          type="text"
-          class="form-control"
-          v-model="form.location.city"
-          required
-        />
+        <input type="text" class="form-control" v-model="form.location.city" required />
       </div>
       <div class="form-group mt-3">
         <label>Street</label>
-        <input
-          type="text"
-          class="form-control"
-          v-model="form.location.street"
-          required
-        />
+        <input type="text" class="form-control" v-model="form.location.street" required />
       </div>
       <div class="form-group mt-3">
         <label>ImgUrl</label>
-        <input
-          type="text"
-          class="form-control"
-          v-model="form.imgUrl"
-          required
-        />
+        <input type="text" class="form-control" v-model="form.imgUrl" required />
       </div>
       <div class="form-group mt-3">
         <label>Genre</label>
@@ -115,7 +95,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-form {
-  color: black;
+.card {
+  background: none;
+  border: none;
+
+  form {
+
+
+    input {
+      background-color: rgba($quaternary-color, 0.8);
+    }
+
+  }
 }
 </style>

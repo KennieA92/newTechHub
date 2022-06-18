@@ -26,22 +26,11 @@ export default {
 <style lang="scss" scoped>
 #testimonials-section {
     margin-top: 5vh;
-    margin-bottom: 5vh;
-
-    h1 {
-        margin-top: 5vh;
-        color: black;
-    }
-
-    .main-container {
-        margin-top: 5vh;
-
-        .testimonial-container {
-
-            border: 1px solid $primary-color;
-            padding-bottom: 5vh;
-
-        }
-    }
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    background: linear-gradient(to bottom,
+            $primary-color,
+            40%,
+            $secondary-color 100%);
 }
 </style>

@@ -65,6 +65,18 @@ export default {
 
 <style lang="scss" scoped>
 .testimonial-create {
-  color: black;
+  background: none;
+  border: none;
+  padding-bottom: 10vh;
+
+  form {
+
+
+    input {
+      background-color: rgba($quaternary-color, 0.8);
+    }
+
+  }
+
 }
 </style>

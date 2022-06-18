@@ -31,9 +31,8 @@ export default {
 <style lang="scss" scoped>
 .main-container {
     min-height: 40vh;
-    color: black;
-    border: 1px solid $primary-color;
-    background: rgba($primary-color, 0.01);
+    padding: 10px;
+    background: rgba($quaternary-color, 0.05);
     margin: 1vw;
 
     span {

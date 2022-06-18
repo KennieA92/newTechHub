@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
-    <div class="container">
-      <div class="row">
+    <div class="container  flex-wrap">
+      <div class="justify-content-center align-items-center d-flex flex-wrap">
         <div class="col-sm-12 col-md-6">
           <p>About</p>
           <p class="text-justify">
@@ -11,8 +11,6 @@
             consequatur explicabo. Quaerat deserunt vitae ex?
           </p>
         </div>
-
-        <div class="col-xs-6 col-md-3"></div>
 
         <div class="col-xs-6 col-md-3">
           <p>Quick Links</p>
@@ -115,7 +113,7 @@ export default {};
 .footer-links a:active,
 .footer-links a:focus,
 .footer-links a:hover {
-  color: $primary-color;
+  color: $tertiary-color;
   text-decoration: none;
 }
 
