@@ -8,24 +8,31 @@
         </button>
       </div>
     </div>
-    <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
-      contentText="Create Gallery Images by selecting a File or by Dragging and Dropping one unto the box." />
-    <div class="gallery-create d-flex col-12 justify-content-center">
-      <div @dragover.prevent @drop.prevent class="d-flex flex-wrap justify-content-center col-8">
-        <label class="form-label " for="customFile">
-          <h3>Default file input example</h3>
-        </label>
-        <input @change="upload" type="file" class="form-control" id="customFile" />
-        <div class="d-flex box justify-content-center align-items-center col-12" @drop="upload"> Drag to Upload</div>
+    <div class="create-container">
+      <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
+        contentText="Create Gallery Images by selecting a File or by Dragging and Dropping one unto the box." />
+      <div class="gallery-create mt-3 d-flex col-12 justify-content-center">
+        <div @dragover.prevent @drop.prevent class="d-flex flex-wrap justify-content-center col-8">
+          <label class="form-label " for="customFile">
+            <h3>Default file input example</h3>
+          </label>
+          <input @change="upload" type="file" class="form-control" id="customFile" />
+          <div class="d-flex box justify-content-center align-items-center col-12" @drop="upload"> Drag to Upload</div>
+        </div>
       </div>
     </div>
-    <RightStartUpComponent class="right-box" data-aos="fade-left" data-aos-duration="1000"
-      contentText="Create Events by filling out the form below." />
-    <TechEventCreate />
-    <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
-      contentText="Create Testimonials by filling out the form below" />
-    <TestimonialCreateComponent />
-    <TestimonialListComponent />
+    <div class="create-container">
+      <RightStartUpComponent class="right-box" data-aos="fade-left" data-aos-duration="1000"
+        contentText="Create Events by filling out the form below." />
+      <TechEventCreate />
+    </div>
+
+    <div class="create-container">
+      <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
+        contentText="Create Testimonials by filling out the form below" />
+      <TestimonialCreateComponent />
+      <TestimonialListComponent />
+    </div>
   </div>
 </template>
 
@@ -124,33 +131,34 @@ export default {
     }
   }
 
-  .content-container {
-    margin-top: 10vh;
-    border: 5px solid $quaternary-color;
-  }
+  .create-container {
 
-  .gallery-create {
-    margin: 5vh 0;
+    padding: 5vh 0;
+    border-top: solid 1px $quaternary-color;
 
-    .form-control {
-      background: $tertiary-color;
-      border-radius: 0;
-      color: white;
-      border: 2px solid $tertiary-color;
-    }
+    .gallery-create {
 
-    .box {
-      min-height: 500px;
-      border-radius: 0;
 
-      border: 2px solid $tertiary-color;
-      color: $quaternary-color;
-      background: $secondary-color;
-    }
+      .form-control {
+        background: $tertiary-color;
+        border-radius: 0;
+        color: white;
+        border: 2px solid $tertiary-color;
+      }
 
-    @media only screen and (max-width: 600px) {
       .box {
-        display: none !important;
+        min-height: 500px;
+        border-radius: 0;
+
+        border: 2px solid $tertiary-color;
+        color: $quaternary-color;
+        background: $secondary-color;
+      }
+
+      @media only screen and (max-width: 600px) {
+        .box {
+          display: none !important;
+        }
       }
     }
   }

@@ -2,50 +2,33 @@
   <div class="col-12 d-flex justify-content-center" v-if="showNavbar">
     <nav class="navbar navbar-expand-lg col-12 col-sm-12 col-md-12">
       <div class="d-flex container-fluid justify-content-md-around col-10 px-0">
-        <a class="navbar-brand col-3 d-flex" href="/"
-          ><img src="../assets/logo.svg" alt="logo" />
-          <div
-            class="
+        <a class="navbar-brand col-3 d-flex" href="/"><img src="../assets/logo.svg" alt="logo" />
+          <div class="
               brand-name
               d-flex
               flex-column
               align-items-center
               justify-content-center
-            "
-          >
+            ">
             <p>Techhub Syd</p>
           </div>
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarTogglerDemo02"
-          aria-controls="navbarTogglerDemo02"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
+          aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
             <i class="fas fa-bars"></i>
           </span>
         </button>
-        <div
-          class="collapse navbar-collapse col-md-10 justify-content-end"
-          id="navbarTogglerDemo02"
-        >
+        <div class="collapse navbar-collapse col-md-10 justify-content-end" id="navbarTogglerDemo02">
           <ul class="navbar-nav mb-2 mb-lg-0">
             <li class="nav-item">
-              <router-link class="nav-link" to="/techStartUp"
-                >Start Ups</router-link
-              >
+              <router-link class="nav-link" to="/techStartUp">Start Ups</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/events">Events</router-link>
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/contact"
-                >Contact Us</router-link
-              >
+              <router-link class="nav-link" to="/contact">Contact Us</router-link>
             </li>
             <li class="nav-item">
               <router-link class="nav-link" to="/gallery">Gallery</router-link>
@@ -55,11 +38,15 @@
       </div>
     </nav>
   </div>
+
+  <BannerComponent contentText="Be prepared to be amazed, click here to see our newest events!" />
+
 </template>
 
 <script>
 import { ref, onUnmounted, onMounted } from "vue";
 import { useRoute } from "vue-router";
+import BannerComponent from "@/components/BannerComponent.vue";
 export default {
   setup() {
     const route = useRoute();
@@ -78,6 +65,9 @@ export default {
     };
     return { showNavbar };
   },
+  components: {
+    BannerComponent
+  }
 };
 </script>
 
@@ -98,6 +88,7 @@ nav {
   a {
     font-size: 1rem;
     font-weight: bold;
+
     &:hover {
       color: $tertiary-color;
     }

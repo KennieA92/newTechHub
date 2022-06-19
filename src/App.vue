@@ -6,7 +6,7 @@
 
 <script>
 import "firebase/compat/auth";
-import {} from "@/firebase.js"; // all from firebase.js file
+import { } from "@/firebase.js"; // all from firebase.js file
 import NavigationComponent from "@/components/NavigationComponent.vue";
 import FooterComponent from "@/components/FooterComponent.vue";
 export default {
@@ -14,7 +14,7 @@ export default {
     NavigationComponent,
     FooterComponent,
   },
-  setup() {},
+  setup() { },
 };
 </script>
 

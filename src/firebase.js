@@ -20,7 +20,7 @@ const firebaseApp = firebase.initializeApp(config);
 const db = firebaseApp.firestore();
 const techEventCollection = db.collection('techEvents'); // grab the collection from firestore
 const testimonialCollection = db.collection('testimonials');
-const galleryImageCollection = db.collection('galleryImages');
+const galleryImageCollection = db.collection('galleryImagesTest');
 
 
 // Adding images to the gallery
@@ -49,7 +49,7 @@ export const uploadImage = async (e) => {
       console.log('Success'); // Successfully uploaded
       getDownloadURL(fileRef) // Get the download URL for the fileRef from the storage bucket
         .then((url) => { // Add the image(file) to the galleryImages database.
-          addDoc(collection(db, 'galleryImages/'), { // Assign the image to the galleryImages collection and give it an id automatically.
+          addDoc(collection(db, 'galleryImagesTest/'), { // Assign the image to the galleryImages collection and give it an id automatically.
             img: file.name,
             url: url,
           });

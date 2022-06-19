@@ -24,6 +24,9 @@ export default {
     height: 150px;
     font-size: 1.5rem;
 
+    border: 5px solid $quaternary-color;
+    border-right: none;
+
     p {
         position: absolute;
         right: 25%;

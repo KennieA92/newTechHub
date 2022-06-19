@@ -33,8 +33,7 @@ export default {
 <style lang="scss" scoped>
 .gallery {
   overflow-x: hidden;
-  margin-top: 80px;
-  height: 100vh;
+  padding-top: 160px;
   background: linear-gradient(to bottom,
       $tertiary-color,
       10%,

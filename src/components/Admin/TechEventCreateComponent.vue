@@ -1,5 +1,5 @@
 <template>
-  <div class="card card-body mt-4">
+  <div class="card card-body mt-1">
     <!-- using @submit as a click function - add prevent to stop from refreshing page -->
     <form @submit.prevent="onSubmit">
       <div class="form-group">
