@@ -35,9 +35,9 @@ export default {
   overflow-x: hidden;
   padding-top: 160px;
   background: linear-gradient(to bottom,
-      $tertiary-color,
-      10%,
-      $secondary-color 90%);
+      $primary-color,
+      20%,
+      $secondary-color 100%);
 
   .main-container {
     padding: 20px;

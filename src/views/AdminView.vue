@@ -9,6 +9,7 @@
       </div>
     </div>
     <div class="create-container">
+      <h1>Create Gallery Image</h1>
       <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
         contentText="Create Gallery Images by selecting a File or by Dragging and Dropping one unto the box." />
       <div class="gallery-create mt-3 d-flex col-12 justify-content-center">
@@ -22,12 +23,14 @@
       </div>
     </div>
     <div class="create-container">
+      <h1>Create Event</h1>
       <RightStartUpComponent class="right-box" data-aos="fade-left" data-aos-duration="1000"
         contentText="Create Events by filling out the form below." />
       <TechEventCreate />
     </div>
 
     <div class="create-container">
+      <h1>Create Testimonial</h1>
       <LeftStartUpComponent class="left-box" data-aos="fade-right" data-aos-duration="1000"
         contentText="Create Testimonials by filling out the form below" />
       <TestimonialCreateComponent />
